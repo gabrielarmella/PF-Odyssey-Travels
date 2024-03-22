@@ -124,6 +124,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 800px;
     height: 50px;
     gap: .9375rem;
@@ -157,7 +158,7 @@
     justify-content: center;
     width: 180px;
     height: 45px;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 .menu-der a {
@@ -165,8 +166,6 @@
     justify-content: center;
     width: 150px;
     text-decoration: none;
-
-
 }
 
 .menu-der a .checkin{ 

@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content ="IE-edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odyssey Travels</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
-<body class="destBariloche">
+<body class="bgFondo">
+    <div class="bgCard">
+        <img class="bgImg" src="../assets/img/Destinos/destinos-varios/destinos (6).jpg" alt="imagen de fondo">
+    </div>
     <header>
         <nav class="navBar">
             <div class="menu-izq">
-                <a href="../index.html">Odyssey Travels</a>
+                <a href="../pages/inicio.html" >Odyssey Travels</a>
             </div>
             <ul class="menu-cen">
-                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="../pages/inicio.html">INICIO</a></li>
                 <li><a href="../pages/destinos.html">DESTINOS</a></li>
                 <li><a href="../pages/ofertas.html">OFERTAS</a></li>
                 <li><a href="../pages/vacaciones.html">VACACIONES</a></li>
@@ -26,24 +32,325 @@
             </ul>
             <div class="menu-der">
                 <a href="../pages/check-in.html">
-                    <button>CHECK-IN</button>
+                    <button class="checkin">CHECK-IN</button>
                 </a>
             </div>
         </nav>
     </header>
     <main class="mainTravels">
-        <div class="contDestino">
-            <h2 class="paisDest">ARGENTINA</h2>
-            <h3 class="ciudadDest">SAN CARLOS DE BARILOCHE</h3>
-            <p class="desCiudad">Bariloche es una ciudad ubicada entre bosques milenarios, montañas 
-                cubiertas de nieve y lagos cristalinos, en la provincia de Río Negro, Argentina. 
-                Se trata de una postal de nuestra Patagonia. Una ciudad anfitriona por excelencia, 
-                enmarcada por algunas de las bellezas naturales más importantes del país.</p>
+        <!--Social Media-->
+        <div class="contenedorIconos">
+            <a href="https://www.facebook.com/" class="fb"><img src="../assets/img/Iconos/facebook-icon.png" alt="icono facebook"></a>
+            <a href="https://twitter.com/" class="tw"><img src="../assets/img/Iconos/twitter-icon.png" alt="icono twitter"></a>
+            <a href="https://www.instagram.com/" class="in"><img src="../assets/img/Iconos/instagram-icon.png" alt="icono instagram"></a>
+        </div>  
+        <form action="">
+            <fieldset>
+                <div class="trayectos">
+                    <label for="check" id="check">Vuelta</label>
+                    <input type="checkbox" class="rounded-checkbox" id="check">
+                    <label for="check" id="check">Ida</label>
+                    <input type="checkbox" class="rounded-checkbox" id="check">
+                    <label for="check" id="check">Multiples Trayectos</label>
+                    <input type="checkbox" class="rounded-checkbox" id="check">
+                </div>
+                <div>
+                    <label for="Origen">ORIGEN:</label>
+                    <input type="text" id="origen" required placeholder="desde donde viaja">
+                </div>
+                <div>
+                    <label for="Destino">DESTINO:</label>
+                    <input type="text" id="destino" required placeholder="hacia donde viaja">
+                </div>
+                <div>
+                    <label for="Destino">FECHAS:</label>
+                    <input type="text" id="destino" required placeholder="hacia donde viaja">
+                </div>
+                <div>
+                    <label for="Destino">Hotel:</label>
+                    <input type="text" id="destino" required placeholder="donde se hospeda">
+                </div>
+                <div>
+                    <label for="numero">Pasajeros</label>
+                    <select name="numero" id="num">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="numero">Clases</label>
+                    <select name="numero" id="num">
+                        <option value="">Turista</option>
+                        <option value="">Economica Plus</option>
+                        <option value="">Business</option>
+                        <option value="">Primera Clase</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+        <!--Boton Compra-->
+        <div class="container-boton-destinos">
+            <div class="compraDiv">
+                <p>DESDE</p>
+                <p>u$d 849</p>
+                <button class="botonCompra"><p>COMPRAR</p></button>
+            </div>
+            <!--Destinos Recomendados-->
+        <section class="destinosRec">
+            <div class="destino1">
+                <div class="card-img">
+                    <a href="../pages/destinos-ofrecidos/chile-santiago.html"><img src="../assets/img/chile-santiago.jpg" alt="destino-chile">
+                        <div class="dest-info">
+                            <p class="dest-pais">CHILE</p>
+                            <h2 class="dest-ciudad">Santiago</h2>  
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="destino2">
+                <div class="card-img">
+                    <a href="../pages/destinos-ofrecidos/jujuy.html"><img src="../assets/img/jujuy.jpg" alt="destino-argentina1">
+                        <div class="dest-info">
+                            <p class="dest-pais">ARGENTINA</p>
+                            <h2 class="dest-ciudad">Jujuy</h2>  
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="destino3">
+                <div class="card-img">
+                    <a href="../pages/destinos-ofrecidos/peru-lima.html"><img src="../assets/img/peru-lima.jpg" alt="destino-perú">
+                        <div class="dest-info">
+                            <p class="dest-pais">PERÚ</p>
+                            <h2 class="dest-ciudad">Lima</h2>  
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="destino4">
+                <div class="card-img">
+                    <a href="../pages/destinos-ofrecidos/ushuaia.html"><img src="../assets/img/destino-ushuaia (4).jpg" alt="destino-argentina2">
+                        <div class="dest-info">
+                            <p class="dest-pais">ARGENTINA</p>
+                            <h2 class="dest-ciudad">Ushuaia</h2>  
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="destino5">
+                <div class="card-img">
+                    <a href="../pages/destinos-ofrecidos/bariloche.html"><img src="../assets/img/bariloche-2.jpg" alt="destino-argentina3">
+                        <div class="dest-info">
+                            <p class="dest-pais">ARGENTINA</p>
+                            <h2 class="dest-ciudad">Bariloche</h2>  
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="ofertas">
+            <div class="contenedor-ofertas">
+                <div class="card-img">
+                    <a href=""><img src="" alt=""></a>
+                    <div class="dest-info">
+                        <p class="dest-ciudad"></p>
+                        <h2 class="dest-pais"></h2>  
+                    </div>
+                </div>
+            </div>
+        </section>
         </div>
-        
+        <!--Hoteles-->
+        <div class="divHotel">
+            <img src="../assets/img/hoteles/hotel-fondo2.jpg" alt="imagen background hotel">
+        </div>
+        <h2 class="tituloHotel">HOTELES</h2>
+        <p class="parrafoHotel">ENCUENTRA LOS MEJORES</p>
+        <div class="seccionHoteles">
+            <section class="container-hoteles">
+                <div class="hotel1">
+                    <img src="../assets/img/hoteles/hotel (1).jpg" alt="imagen hotel 1">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel2">
+                    <img src="../assets/img/hoteles/hotel (2).jpg" alt="imagen hotel 2">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel3">
+                    <img src="../assets/img/hoteles/hotel (3).jpg" alt="imagen hotel 3">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel4">
+                    <img src="../assets/img/hoteles/hotel (4).jpg" alt="imagen hotel 4">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel5">
+                    <img src="../assets/img/hoteles/hotel (5).jpg" alt="imagen hotel 5">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel6">
+                    <img src="../assets/img/hoteles/hotel (6).jpg" alt="imagen hotel 6">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel7">
+                    <img src="../assets/img/hoteles/hotel (7).jpg" alt="imagen hotel 7">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel8">
+                    <img src="../assets/img/hoteles/hotel (8).jpg" alt="imagen hotel 8">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel9">
+                    <img src="../assets/img/hoteles/hotel (9).jpg" alt="imagen hotel 9">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel10">
+                    <img src="../assets/img/hoteles/hotel (10).jpg" alt="imagen hotel 10">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel11">
+                    <img src="../assets/img/hoteles/hotel (11).jpg" alt="imagen hotel 11">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel12">
+                    <img src="../assets/img/hoteles/hotel (12).jpg" alt="imagen hotel 12">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel13">
+                    <img src="../assets/img/hoteles/hotel (13).jpg" alt="imagen hotel 13">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel14">
+                    <img src="../assets/img/hoteles/hotel (14).jpg" alt="imagen hotel 14">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel15">
+                    <img src="../assets/img/hoteles/hotel (15).jpg" alt="imagen hotel 15">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel16">
+                    <img src="../assets/img/hoteles/hotel (16).jpg" alt="imagen hotel 16">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel17">
+                    <img src="../assets/img/hoteles/hotel (17).jpg" alt="imagen hotel 17">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel18">
+                    <img src="../assets/img/hoteles/hotel (18).jpg" alt="imagen hotel 18">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel19">
+                    <img src="../assets/img/hoteles/hotel (19).jpg" alt="imagen hotel 19">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel20">
+                    <img src="../assets/img/hoteles/hotel (20).jpg" alt="imagen hotel 20">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel21">
+                    <img src="../assets/img/hoteles/hotel (21).jpg" alt="imagen hotel 21">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel22">
+                    <img src="../assets/img/hoteles/hotel (22).jpg" alt="imagen hotel 22">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel23">
+                    <img src="../assets/img/hoteles/hotel (23).jpg" alt="imagen hotel 23">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel24">
+                    <img src="../assets/img/hoteles/hotel (24).jpg" alt="imagen hotel 24">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel25">
+                    <img src="../assets/img/hoteles/hotel (25).jpg" alt="imagen hotel 25">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel26">
+                    <img src="../assets/img/hoteles/hotel (26).jpg" alt="imagen hotel 26">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel27">
+                    <img src="../assets/img/hoteles/hotel (27).jpg" alt="imagen hotel 27">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel28">
+                    <img src="../assets/img/hoteles/hotel (28).jpg" alt="imagen hotel 28">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+                <div class="hotel29">
+                    <img src="../assets/img/hoteles/hotel (29).jpg" alt="imagen hotel 29">
+                        <div class="hotel-info">
+                            <p>texto hotel</p>
+                        </div>
+                </div>
+            </section>
+        </div>
     </main>
+    <!--Footer-->
     <footer class="footer">
-        <p>Esto es un footer</p>
+        
     </footer>
+    
 </body>
 </html>

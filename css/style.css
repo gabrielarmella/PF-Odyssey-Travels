@@ -651,13 +651,13 @@ form fieldset .trayectos{
 .container-hoteles{
     position: relative; 
     width: 60%;
-    height: 3250px;
+    height: 3350px;
     top:20px;
     padding: 20px;
     gap: 2.5rem;
     display: grid;
     clear: both;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
     border-radius: 20px;
     box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
 }

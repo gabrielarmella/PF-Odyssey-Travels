@@ -18,17 +18,14 @@
 
 .bgCard{
     position: absolute;
-    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 65%;
-    top: 0;
-    left: 0;
+    height: 700px;
     z-index: -1;
 }
 
 
 .bgCard .bgImg{
-    position: absolute;
     min-width: 100%;
     height: 100%;
     object-fit: cover;
@@ -46,7 +43,7 @@
 
 .bgChile{
     position: absolute;
-    display: flex;
+    justify-content: center;
     min-width: 100%;
     height: 650px;
     top: 0;
@@ -54,7 +51,6 @@
 }
 
 .bgBariloche .bgImg{
-    position: absolute;
     min-width: 100%;
     height: 100%;
     object-fit: cover;
@@ -78,17 +74,6 @@
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.295);
 }
 
-.navBar-destinos {
-    position: absolute;
-    display: flex;
-    justify-content: space-evenly;
-    min-width: 100%;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.295);
-}
-
-
-
 .menu-izq{
     display: flex;
     width: 400px;
@@ -106,18 +91,6 @@
     font-style: normal;
     font-size: 42px;
 }
-
-
-.navBar-destinos .menu-izq a{
-    display: flex;
-    width: 700px;
-    text-decoration: none;
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 42px;
-}
-
 
 
 .menu-cen{
@@ -145,13 +118,6 @@
     justify-content: center;
     text-decoration: none;
 }
-.navBar-destinos .menu-cen a {
-    position: relative;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-}
-
 /* Boton CHECK-IN */
 .menu-der{
     display: flex;
@@ -187,13 +153,13 @@
 /*Form*/
 
 form{
-    position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     width: 100%;
-    height: 100px;
-    margin-top: 120px;
+    height: 500px;
+
 }
 
 form fieldset{
@@ -211,9 +177,8 @@ form fieldset div{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-left: 20px;
-
 }
+
 form fieldset .trayectos{
     padding-left: 10px;
 }
@@ -237,10 +202,9 @@ form fieldset .trayectos{
 /*Iconos de redes sociales*/
 
 .contenedorIconos{
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-
+    display: inline-block;
+    
+    justify-content: center;
 }
 
 .contenedorIconos a{
@@ -256,50 +220,53 @@ form fieldset .trayectos{
 /*Parametros Main*/
 
 .mainTravels{
-    position: relative;
     max-width: 100%;
     min-height: 100vh;
-    top: 8%;
 }
 
 /* Descripcion Ciudades/Paises */
+.divInfo{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    top: 40px;
+    left: 60px;
+}
 
+.divInfo1{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    top: 40px;
+    left: 80px;
+}
 .contDestino{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.583);
-    width: 550px;
-    padding: 10px;
-    left: 2%;
-    height: auto;
+    background-color: rgba(0, 0, 0, 0.783);
+    width: 500px;
     border-radius: 20px;
 }
 .contDestino1{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.583);
-    width: 700px;
-    height: auto;
-    padding: 10px;
-    left: 2%;
+    background-color: rgba(0, 0, 0, 0.783);
+    width: 500px;
     border-radius: 20px;
 }
 
 .contDestino2{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.583);
-    width: 900px;
-    height: auto;
-    padding: 10px;
-    left: 2%;
+    background-color: rgba(0, 0, 0, 0.783);
+    width: 700px;
     border-radius: 20px;
 }
 
+
+
 .paisDest {
+    position: relative;
     text-align: start;
     margin: 10px;
     font-size: 20px;
@@ -316,6 +283,8 @@ form fieldset .trayectos{
 }
 
 .desCiudad{
+    position: relative;
+    text-align: start;
     font-size: 18px;
     margin: 10px;
     font-weight: 200;
@@ -371,8 +340,8 @@ form fieldset .trayectos{
     justify-content: center;
     flex-direction: row;
     align-items: flex-end;
-    margin-top: 420px;
     gap: 20px;
+    top: 100px;
 }
 
 .container-destinos{
@@ -384,7 +353,6 @@ form fieldset .trayectos{
     position:relative;
     width: 75%;
     height: 500px;
-    top:20px;
     gap: 2.5rem;
     padding: 20px 30px 20px 30px;
     display: grid;
@@ -604,31 +572,36 @@ form fieldset .trayectos{
 }
 
 /*Seccion Hoteles*/
-
-.seccionHoteles{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-}
-
 .divHotel{
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: 500px;
-    margin-top: 250px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
 }
 
-.divHotel img{
+.card-hotel{
+    position: absolute;
     width: 100%;
+    height: 400px;
+    display: flex;
+}
+
+.textoDiv{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-hotel img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .tituloHotel{
-    position: absolute;
-    margin-top: -385px;
-    margin-left: 800px;
+    text-align: center;
     font-size: 350px;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -637,36 +610,43 @@ form fieldset .trayectos{
     letter-spacing: 5px;
 }
 .parrafoHotel{
-    position: absolute;
-    margin-left: 825px;
-    margin-top: -305px;
+    text-align: center;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: rgba(255, 255, 255, 0.855);
-    font-size: 50px;
+    font-size: 35px;
     letter-spacing: 15px;
 }
 
-.container-hoteles{
-    position: relative; 
-    width: 60%;
-    height: 3350px;
-    top:20px;
-    padding: 20px;
-    gap: 2.5rem;
-    display: grid;
-    clear: both;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    border-radius: 20px;
-    box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
+.seccionHoteles{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
 }
 
+.container-hoteles{
+    gap: 10px;
+    padding: 40px;
+    margin: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    border-radius: 10px;
+    justify-items: center;
+    background: #0062ff;
+    
+}
+
+.hotel-info{
+    padding: 15px;
+}
 
 .hotel1 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 
@@ -674,112 +654,128 @@ form fieldset .trayectos{
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel3 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel4 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel5 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel6 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel7 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel8 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel9 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel10 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel11 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel12 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel13 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel14 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel15 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel16 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel17 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 
 }
 
@@ -787,7 +783,8 @@ form fieldset .trayectos{
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 
 }
 
@@ -795,7 +792,8 @@ form fieldset .trayectos{
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 
 }
 
@@ -803,15 +801,16 @@ form fieldset .trayectos{
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
-
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel21 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 
 }
 
@@ -819,7 +818,8 @@ form fieldset .trayectos{
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 
 }
 
@@ -827,51 +827,63 @@ form fieldset .trayectos{
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel24 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
+
 
 .hotel25 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel26 {
     width: 250px;
     height: 380px;
-    overflow: hidden;
-    border-radius: 1.125rem;
+    overflow: hidden;   
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
+
 }
 
 .hotel27 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel28 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
 .hotel29 {
     width: 250px;
     height: 380px;
     overflow: hidden;
-    border-radius: 1.125rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.905);
 }
 
+.destino1 .card-img:hover{
+    filter: drop-shadow();
+}
 
 .hotel1 img{
     width: 100%;

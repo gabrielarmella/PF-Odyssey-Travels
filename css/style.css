@@ -365,6 +365,10 @@ form fieldset .trayectos{
     align-items: center;
 }
 
+.destino1 .card-im a:hover {
+    background: rgba(0, 0, 0, 0.637);
+}
+
 .contenedorDest{
     gap: 2.5rem;
     padding: 20px 30px 20px 30px;
@@ -388,6 +392,8 @@ form fieldset .trayectos{
     height: 100%;
     object-fit: cover;
 }
+
+
 
 .dest-info{
     position: absolute;
@@ -729,9 +735,35 @@ form fieldset .trayectos{
     background: rgba(255, 255, 255, 0.905);
 }
 
-.destino1 .card-img:hover{
-    filter: drop-shadow(.80);
+/*Pseudo clases */ 
+#destinosSugeridos img:hover{
+    filter:saturate(2);
 }
+/*Pseudo clases */ 
+/*Pseudo Elemento*/
+span[data-descr] {
+    position: relative;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0);
+    cursor: help;
+}
+
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    top: 24px;
+    min-width: 100px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #ffffcc;
+    padding: 12px;
+    color: #000000;
+    font-size: 14px;
+    z-index: 1;
+}
+/*Pseudo Elemento*/
 
 .hotel1 img{
     width: 100%;

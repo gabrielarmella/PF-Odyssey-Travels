@@ -184,17 +184,15 @@ form fieldset .trayectos{
     border-radius: 8px;
 }
 
-#fecha{
+#fechas{
     border-radius: 8px;
 }
 
-#hotelf{
+#hotel{
     border-radius: 8px;
 }
 
-.numero{
-    border-radius: 3px;
-}
+
 .rounded-checkbox {
     width:20px;
     height: 15px;

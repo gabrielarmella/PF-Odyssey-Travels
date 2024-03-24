@@ -11,9 +11,13 @@
 
 /* Backgrounds */
 
+/* body{
+    overflow-x: hidden;
+} */
 .bgFondo{
-    width: 100%;
+    max-width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .bgCard{
@@ -34,20 +38,18 @@
 
 .bgBariloche{
     position: absolute;
-    display: flex;
-    min-width: 100%;
-    height: 650px;
-    top: 0;
-    left: 0;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    z-index: -1;
 }
 
 .bgChile{
     position: absolute;
     justify-content: center;
-    min-width: 100%;
-    height: 650px;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: 700px;
+    z-index: -1;
 }
 
 .bgBariloche .bgImg{
@@ -61,30 +63,28 @@
     background-color: #ffffff;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /*Menu de navegacion*/
 
 .navBar {
-    position: absolute;
+    position: relative;
+    width: 100vw;
     display: flex;
-    justify-content: space-evenly;
-    min-width: 100%;
+    align-items: center;
+    justify-content: space-around;
     background: rgb(255, 255, 255);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.295);
 }
 
 .menu-izq{
     display: flex;
-    width: 400px;
-    height: 55px;
-    margin-top: 10px;
-    
+    justify-content: start;
 }
 
 .navBar .menu-izq a{
     display: flex;
-    width: 700px;
     text-decoration: none;
     font-family: "Righteous", sans-serif;
     font-weight: 400;
@@ -94,37 +94,30 @@
 
 
 .menu-cen{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 800px;
-    height: 50px;
     gap: .9375rem;
 }
 
 .menu-cen li{
-    position: relative;
     list-style: none;
-    margin-top: 25px;
     font-family: "Poppins", sans-serif;
     font-size: 23px;
     font-weight: 600;
 }
 
 .menu-cen li a {
-    position: relative;
     display: flex;
     justify-content: center;
     text-decoration: none;
+    align-items: center;
 }
 /* Boton CHECK-IN */
 .menu-der{
     display: flex;
     justify-content: center;
-    width: 180px;
-    height: 45px;
-    margin-top: 8px;
+    align-items: center;
 }
 
 .menu-der a {
@@ -135,8 +128,8 @@
 }
 
 .menu-der a .checkin{ 
-    width: 150px;
-    height: 45px;
+    width: 125px;
+    height: 40px;
     color: rgba(255, 255, 255, 0.822);
     font-size: 20px; 
     font-family: "Poppins", sans-serif;
@@ -150,16 +143,16 @@
 
 
 
-/*Form*/
+/*Cuadro del formulario de vuelo*/
+
+
 
 form{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 100%;
-    height: 500px;
-
+    margin-top: 200px;
 }
 
 form fieldset{
@@ -168,8 +161,8 @@ form fieldset{
     width: 70%;
     height: 100px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
 }
 
 form fieldset div{
@@ -183,6 +176,25 @@ form fieldset .trayectos{
     padding-left: 10px;
 }
 
+#origen{
+    border-radius: 8px;
+}
+
+#destino{
+    border-radius: 8px;
+}
+
+#fecha{
+    border-radius: 8px;
+}
+
+#hotelf{
+    border-radius: 8px;
+}
+
+.numero{
+    border-radius: 3px;
+}
 .rounded-checkbox {
     width:20px;
     height: 15px;
@@ -199,12 +211,13 @@ form fieldset .trayectos{
     clip-path: circle(50% at 50% 50%);
     background-color: blue;
 }
+/*Cuadro del formulario de vuelo*/
 /*Iconos de redes sociales*/
 
 .contenedorIconos{
-    display: inline-block;
-    
-    justify-content: center;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .contenedorIconos a{
@@ -244,14 +257,14 @@ form fieldset .trayectos{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.783);
-    width: 500px;
+    width: 600px;
     border-radius: 20px;
 }
 .contDestino1{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.783);
-    width: 500px;
+    width: 700px;
     border-radius: 20px;
 }
 
@@ -344,233 +357,69 @@ form fieldset .trayectos{
     top: 100px;
 }
 
-.container-destinos{
-    justify-content: center;
-    width: 100%;
-}
-
 .destinosRec{
-    position:relative;
-    width: 75%;
-    height: 500px;
-    gap: 2.5rem;
-    padding: 20px 30px 20px 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color: rgba(255, 255, 255, 0.509);
-    border-radius: 20px;
-    box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
+    display: flex;
+    align-items: center;
 }
 
 .destinosRec1{
-    position:relative; 
-    width: 75%;
-    height: 500px;
-    top:20px;
+    display: flex;
+    align-items: center;
+}
+
+.contenedorDest{
     gap: 2.5rem;
     padding: 20px 30px 20px 30px;
     display: grid;
-    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: rgba(255, 255, 255, 0.509);
+    justify-items: center;
     border-radius: 20px;
     box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
+
 }
-
-
-.dest-ciudad{
-    margin-left: 20px;
-    font-size: 28px;
-}
-.dest-pais{
-    font-size: 18px;
-    margin-left: 22px;
-    margin-top: 15px;
-}
-
-
-.destino1 {
-    min-width: 100%;
-    min-height: 100%;
-    border-radius: 1.125rem;
+.card-img {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-
 }
 
-.destino1 .card-img{
-    width: 100%;
-    height: 100%;
-}
-
-.destino1 .card-img img{
+.card-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.destino1 .card-img .dest-info {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: rgba(255, 255, 255, 0.827);
-    border-top-right-radius: 150px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: -100px;
+.dest-info{
+    position: absolute;
+    width: 400px;
     display: flex;
     flex-direction: column;
-    background-color: #535C91;
-    overflow: hidden;
-}
-
-.card-img a {
-    text-decoration: none;
-}
-
-
-
-.destino2 {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-
-
-}
-
-.destino2 .card-img{
-    width: 100%;
-    height: 100%;
-}
-
-.destino2 .card-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.destino2 .card-img .dest-info {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: rgba(255, 255, 255, 0.827);
+    margin-top: -90px;
     border-top-right-radius: 150px;
+    border-top-left-radius: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-top: -100px;
-    display: flex;
-    flex-direction: column;
     background-color: #535C91;
-    overflow: hidden;
 }
 
-.destino3 {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-
+.dest-info .dest-pais{
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
-.destino3 .card-img{
-    width: 100%;
-    height: 100%;
-}
-
-.destino3 .card-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.destino3 .card-img .dest-info {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: rgba(255, 255, 255, 0.827);
-    border-top-right-radius: 150px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: -100px;
-    display: flex;
-    flex-direction: column;
-    background-color: #535C91;
-    overflow: hidden;
-}
-
-
-.destino4 {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.destino4 .card-img{
-    width: 100%;
-    height: 100%;
-}
-
-.destino4 .card-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.destino4 .card-img .dest-info {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: rgba(255, 255, 255, 0.827);
-    border-top-right-radius: 150px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: -100px;
-    display: flex;
-    flex-direction: column;
-    background-color: #535C91;
-    overflow: hidden;
-}
-
-.destino5 {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.destino5 .card-img{
-    width: 100%;
-    height: 100%;
-}
-
-.destino5 .card-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.destino5 .card-img .dest-info {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: rgba(255, 255, 255, 0.827);
-    border-top-right-radius: 150px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: -100px;
-    display: flex;
-    flex-direction: column;
-    background-color: #535C91;
-    overflow: hidden;
+.dest-info .dest-ciudad{
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 3px;
 
 }
-
 /*Seccion Hoteles*/
 .divHotel{
     width: 100%;
@@ -631,10 +480,11 @@ form fieldset .trayectos{
     margin: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    border-radius: 10px;
+    border-radius: 20px;
     justify-items: center;
-    background: #0062ff;
-    
+    background: #ffffffca;
+    overflow: hidden;
+    box-shadow: 1px 1px 23px -5px rgba(0,0,0,0.8);
 }
 
 .hotel-info{
@@ -882,7 +732,7 @@ form fieldset .trayectos{
 }
 
 .destino1 .card-img:hover{
-    filter: drop-shadow();
+    filter: drop-shadow(.80);
 }
 
 .hotel1 img{
@@ -1074,26 +924,27 @@ form fieldset .trayectos{
 
 .mainDestinos{
     position: relative;
-    max-width: 95%;
-    top: 10%;
-    left: 5%;
+    top: 150px;
+}
+.destinosInternacionales{
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.836);
+    background-color: rgba(255, 255, 255, 0.753);
 }
 
 /* Destinos Cards Internacionales*/
 
-.destinosInternacionales{
-    font-size: 40px;
-    align-items: start;
-    margin-left: 40px;
-    color: #535C91;
-}
+
 .contenDest{
-    width: 95%;
     display: grid;
-    gap: 2.1875rem;
-    padding: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(6, 18.75rem);
+    align-content: center;
+    gap: 2.1875rem;
+    padding: 60px;
 }
 
 .cardDest1{
@@ -1151,8 +1002,79 @@ form fieldset .trayectos{
     overflow: hidden;
     box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
 }
-
 .cardDest8{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDest9{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDest10{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDest11{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDest12{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDest13{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDes14{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDes15{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDes16{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.125rem;
+    overflow: hidden;
+    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+}
+
+.cardDes17{
     width: 100%;
     height: 100%;
     border-radius: 1.125rem;
@@ -1164,73 +1086,40 @@ form fieldset .trayectos{
     font-size: 20px;
     border: 1px solid black;
     overflow: hidden;
-    background-color: rgba(109, 51, 191, 1);
+    background-color: rgb(255, 255, 255);
 }
 
-.cardDest1 img {
+.card-img-dest{
     width: 100%;
-    height: 100%;
-    object-fit: cover;    
+    height: 25rem;
+    object-fit: cover;
 }
 
-.cardDest2 img {
+.card-img-dest img{
     width: 100%;
     height: 100%;
-    object-fit: cover;    
-        
+    object-fit: cover;
 }
 
-.cardDest3 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
-        
-}
-
-.cardDest4 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
-        
-}
-
-.cardDest5 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
-        
-}
-
-.cardDest6 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
-        
-}
-
-.cardDest7 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
-        
-}
-
-.cardDest8 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
-        
-}
 
 /* Destinos Cards Nacionales */
 
+.destNacionales{
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.836);
+    background-color: rgba(255, 255, 255, 0.753);
+}
+
 .contenDest2{
-    width: 95%;
     display: grid;
     gap: 2.1875rem;
-    padding: 20px;
+    padding: 60px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(6, 18.75rem);
+    align-content: center;
 }
 
 /* Color Theme Swatches in RGBA */
@@ -1243,61 +1132,1265 @@ form fieldset .trayectos{
 
 
 
-/*Cuadro del formulario de vuelo*/
 
 
-
-/*Cuadro del formulario de vuelo*/
-
-
-
-/*Cuadro del formulario de vuelo*/
-
-/*-Boton de compra*/
-
-
-/*-Boton de compra*/
-
-
-/* .footer{
-    text-align: center;
-    width: 100%;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.599);
-}
-
-.footer p {
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
 
 
 
 /*Responsive - Media Querries*/
 
-@media all and(max-width: 2560px) {
+@media (min-width: 2560px) {
+    .bgCard{
+        width: 100%;
+        height: 45%;
+    }
     
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 
-@media all and(max-width: 1440px) {
+@media (min-width: 1920px) {
+    .bgDestinos{
+        overflow-x: hidden;
+    }
+    .bgCard{
+        width: 100%;
+        height: 45%;
+    }
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+        /*Seccion Destinos*/
+        .destinosInternacionales{
+            font-size: 45px;
+            color: rgba(0, 0, 0, 0.836);
+            background-color: rgba(255, 255, 255, 0.753);
+        }
+        .destNacionales{
+            font-size: 45px;
+        }
+        .contenDest{
+            gap: 30px;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            justify-items:  center;
+        }
+        .contenDest2{
+            gap: 30px;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            justify-items:  center;
+        }
+        
+        .cardDest1{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest2{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest3{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest4{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest5{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest6{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest7{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest8{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest9{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest10{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest11{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest12{
+            width: 350px;
+            height: 400px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+
 }
 
-@media all and(max-width: 1024px) {
-}
 
-@media all and(max-width: 766px) {
+@media (max-width: 1440px) {
+    .bgCard{
+        width: 100%;
+        height: 45%;
+    }
     
-}
-
-@media all and(max-width: 426px) {
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .bgCard{
+        width: 100%;
+    }
     
-}
+    .bgDestinos{
+        width: 100%;
+        height: 100vh;
+    }
+    /*MAIN*/
+    .mainDestinos{
+        position: relative;
+        top: 220px;
+    }
+        /*HEADER*/
+    /*navbar Destinos*/
+    .navBar{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    }
 
-@media all and(max-width: 380px) {
+    .navBar .menu-izq a{
+        font-size: 32px;
+    }
+
+    .menu-cen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5625rem;
+    }
+
+    .menu-cen li{
+        font-size: 20px;
+    }
+    /*boton CHECK-IN*/
+    .menu-der a {
+        width: 120px;
+    }
     
+    .menu-der a .checkin{ 
+        width: 115px;
+        height: 45px;
+        font-size: 18px; 
+    }
+        
+    /*Seccion Destinos*/
+    .destinosInternacionales{
+        font-size: 45px;
+        color: rgba(0, 0, 0, 0.836);
+        background-color: rgba(255, 255, 255, 0.753);
+    }
+    .destNacionales{
+        font-size: 45px;
+    }
+    .contenDest{
+        gap: 20px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items:  center;
+    }
+    .contenDest2{
+        gap: 30px;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: auto;
+        justify-items:  center;
+    }
+    
+    .cardDest1{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest2{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest3{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest4{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest5{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest6{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest7{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest8{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest9{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest10{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest11{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest12{
+        width: 300px;
+        height: 400px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .card-img-dest{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }    
+
 }
 
-@media all and(max-width: 330px) {
+@media (max-width: 1024px) {
+    .bgCard{
+        width: 100%;
+        height: 45%;
+    }
+    
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .mainDestinos{
+        position: relative;
+        top: 180px;
+    }
+    /*HEADER*/
+    /*navbar Destinos*/
+    .navBar{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .navBar .menu-izq a{
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px;
+    }
+
+    .menu-cen{
+        display: flex;
+        align-items: center;
+        gap: .625rem;
+    }
+
+    .menu-cen li{
+        list-style: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+    }
+    /*boton CHECK-IN*/
+    .menu-der{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menu-der a {
+        display: flex;
+        justify-content: center;
+        width: 85px;
+        text-decoration: none;
+    }
+    
+    .menu-der a .checkin{ 
+        width: 155px;
+        height: 30px;
+        font-size: 13px; 
+    }
+    /*Seccion Destinos*/
+    .destinosInternacionales{
+        font-size: 35px;
+    }
+    .destNacionales{
+        font-size: 35px;
+    }
+    .contenDest{
+        gap: 20px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items:  center;
+    }
+    .contenDest2{
+        gap: 30px;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items:  center;
+    }
+}
+
+@media (max-width: 768px) {
+    .bgCard{
+        width: 100%;
+        height: 35%;
+    }
+    
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .mainDestinos{
+        position: relative;
+        top: 180px;
+    }
+
+
+        /*HEADER*/
+    /*navbar Destinos*/
+    .navBar{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .navBar .menu-izq a{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .menu-cen{
+        display: flex;
+        align-items: center;
+        gap: .1875rem;
+    }
+
+    .menu-cen li{
+        list-style: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+    }
+    /*boton CHECK-IN*/
+    .menu-der{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menu-der a {
+        display: flex;
+        justify-content: center;
+        width: 85px;
+        text-decoration: none;
+    }
+    
+    .menu-der a .checkin{ 
+        width: 115px;
+        height: 30px;
+        font-size: 13px; 
+    }
+    /*Seccion Destinos*/
+    .destinosInternacionales{
+        font-size: 25px;
+    }
+    .destNacionales{
+        font-size: 25px;
+    }
+    .contenDest{
+        gap: 10px;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items:  center;
+    }
+    .contenDest2{
+        gap: 10px;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items:  center;
+    }
+    .cardDest1{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest2{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest3{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest4{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest5{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest6{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest7{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest8{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest9{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest10{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest11{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }   
+    .cardDest12{
+        width: 200px;
+        height: 320px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }      
+    .card-img-dest{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    } 
+}
+@media (max-width: 599px) {
+            /*HEADER*/
+    /*navbar Destinos*/
+    .navBar{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .navBar .menu-izq a{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .menu-cen{
+        display: flex;
+        align-items: center;
+        gap: .1875rem;
+    }
+
+    .menu-cen li{
+        list-style: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+    }
+            /*Seccion Destinos*/
+            .destinosInternacionales{
+                font-size: 20px;
+            }
+            .destNacionales{
+                font-size: 20px;
+            }
+            .contenDest{
+                gap: 15px;
+                padding: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                justify-items:  center;
+            }
+            .contenDest2{
+                gap: 15px;
+                padding: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                justify-items:  center;
+            }
+            .cardDest1{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest2{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest3{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest4{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest5{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest6{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest7{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest8{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest9{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest10{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest11{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .cardDest12{
+                width: 180px;
+                height: 280px;
+                border-radius: 1.125rem;
+                overflow: hidden;
+                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+            }   
+            .card-img-dest{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }       
+}
+
+
+@media (max-width: 427px) {
+    .bgCard{
+        width: 100%;
+        height: 35%;
+    }
+    
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .mainDestinos{
+        position: relative;
+        top: 150px;
+    }
+        /*HEADER*/
+    /*navbar Destinos*/
+    .navBar{
+        width: 100%;
+        height: 215px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navBar .menu-izq a{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .menu-cen{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .0125rem;
+    }
+
+    .menu-cen li{
+        list-style: none;
+        font-size: 13px;
+    }
+    /*boton CHECK-IN*/
+    .menu-der{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .menu-der a {
+        display: flex;
+        justify-content: center;
+        width: 85px;
+        text-decoration: none;
+    }
+    
+    .menu-der a .checkin{ 
+        width: 80px;
+        height: 30px;
+        font-size: 11px; 
+    }
+        /*Seccion Destinos*/
+        .destinosInternacionales{
+            font-size: 20px;
+        }
+        .destNacionales{
+            font-size: 20px;
+        }
+        .contenDest{
+            gap: 15px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            justify-items:  center;
+        }
+        .contenDest2{
+            gap: 15px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            justify-items:  center;
+        }
+        .cardDest1{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest2{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest3{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest4{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest5{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest6{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest7{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest8{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest9{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest10{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest11{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .cardDest12{
+            width: 180px;
+            height: 280px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }   
+        .card-img-dest{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+}
+
+@media (max-width: 376px) {
+    .bgCard{
+        width: 100%;
+        height: 45%;
+    }
+    
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /*HEADER*/
+    /*navbar Destinos*/
+    .navBar{
+        width: 100%;
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navBar .menu-izq a{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .menu-cen{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .0125rem;
+    }
+
+    .menu-cen li{
+        list-style: none;
+        font-size: 13px;
+    }
+    /*boton CHECK-IN*/
+    .menu-der{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .menu-der a {
+        display: flex;
+        justify-content: center;
+        width: 85px;
+        text-decoration: none;
+    }
+    
+    .menu-der a .checkin{ 
+        width: 80px;
+        height: 30px;
+        font-size: 11px; 
+    }
+        /*Seccion Destinos*/
+
+        .destinosInternacionales{
+            font-size: 15px;
+        }
+        .destNacionales{
+            font-size: 15px;
+        }
+        
+        .contenDest{
+            gap: 15px;
+            padding: 15px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            align-content: center;
+        }
+    
+        .contenDest2{
+            gap: 15px;
+            padding: 15px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            align-content: center;
+        }
+        .cardDest1{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest2{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest3{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest4{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest5{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest6{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest7{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest8{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest9{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest10{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest11{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        .cardDest12{
+            width: 150px;
+            height: 180px;
+            border-radius: 1.125rem;
+            overflow: hidden;
+            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+        }
+        
+        .card-img-dest{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+}
+
+@media (max-width: 320px) {
+    .bgCard{
+        width: 100%;
+        height: 45%;
+    }
+    
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .bgDestinos{
+        width: 100%;
+        height: 100vh;
+    }
+        /*HEADER*/
+    /*navbar Destinos*/
+    .navBar{
+        width: 100%;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navBar .menu-izq a{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .menu-cen{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .0125rem;
+    }
+
+    .menu-cen li{
+        list-style: none;
+        font-size: 13px;
+    }
+    /*boton CHECK-IN*/
+    .menu-der{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .menu-der a {
+        display: flex;
+        justify-content: center;
+        width: 85px;
+        text-decoration: none;
+    }
+    
+    .menu-der a .checkin{ 
+        width: 80px;
+        height: 30px;
+        font-size: 11px; 
+    }
+    /*MAIN*/
+    .mainDestinos{
+        position: relative;
+        top: 150px;
+    }
+    /*Seccion Destinos*/
+    .destinosInternacionales{
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.836);
+        background-color: rgba(255, 255, 255, 0.753);
+    }
+    .destNacionales{
+        font-size: 15px;
+    }
+    
+    .contenDest{
+        gap: 15px;
+        padding: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-content: center;
+    }
+    .contenDest2{
+        gap: 15px;
+        padding: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-content: center;
+    }
+    .cardDest1{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest2{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest3{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest4{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest5{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest6{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest7{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest8{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest9{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest10{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest11{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .cardDest12{
+        width: 125px;
+        height: 150px;
+        border-radius: 1.125rem;
+        overflow: hidden;
+        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
+    }
+    .card-img-dest{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .contenDest2{
+        display: grid;
+        gap: 2.1875rem;
+        padding: 30px;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+    .card-img-dest{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contenDest .cardDest1 p{
+        font-size: 10px;
+        border: 1px solid black;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+    }
 }

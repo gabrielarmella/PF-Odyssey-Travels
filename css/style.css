@@ -8,55 +8,124 @@
     font-family: "Poppins", sans-serif;
 } 
 
-
 /* Backgrounds */
 
-/* body{
-    overflow-x: hidden;
-} */
 .bgFondo{
     max-width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
 }
 
 .bgCard{
+    width: 100vw;
+    height: 70vh;
     position: absolute;
     justify-content: center;
-    width: 100%;
-    height: 700px;
     z-index: -1;
 }
 
-
-.bgCard .bgImg{
-    min-width: 100%;
+.bgCard img{
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 
-.bgBariloche{
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100vw;
+    height: 800px;
     position: absolute;
-    justify-content: center;
-    width: 100%;
-    height: 700px;
+    margin: auto;
     z-index: -1;
 }
 
-.bgChile{
-    position: absolute;
-    justify-content: center;
+.slideshow-container .mySlides img{
     width: 100%;
-    height: 700px;
-    z-index: -1;
-}
-
-.bgBariloche .bgImg{
-    min-width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    height: 1000px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+  /* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+  /* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/**Slide Show Imagenes**/
 
 
 .bgDestinos{
@@ -68,43 +137,81 @@
 
 /*Menu de navegacion*/
 
+
+
 .navBar {
     position: relative;
+    padding: 15px;
     width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.295);
+    align-items: center;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(83,92,145,1) 100%);
 }
 
-.menu-izq{
+/*Logo/Nombre de la compañia*/
+
+
+.menu-izquierda{
+    float: left;
     display: flex;
     justify-content: start;
+    align-content: center;
 }
-
-.navBar .menu-izq a{
+.menu-izquierda img{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    margin-right    : 10px;
+}
+.navBar .menu-izquierda a{
     display: flex;
+    flex-direction: column;
     text-decoration: none;
+    font-size: 1.6875rem;
+    color: #F9F7F7;
+}
+.menu-izquierda p{
     font-family: "Righteous", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 42px;
+}
+
+.navBar .menu-izquierda:hover{
+    transform: scale(1.3);
+    transition-duration: 0.4s;
 }
 
 
-.menu-cen{
+/*Diferentes Links*/
+
+.navBar .menu-derecha a{
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.menu-derecha{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.menu-cen{
+    display: flex;
+    justify-content: end;
+    align-items: center;
     gap: .9375rem;
+    color: #F9F7F7;
 }
 
 .menu-cen li{
     list-style: none;
     font-family: "Poppins", sans-serif;
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 1.375rem;
+    font-weight: 400;
 }
 
 .menu-cen li a {
@@ -112,64 +219,141 @@
     justify-content: center;
     text-decoration: none;
     align-items: center;
+    color: #F9F7F7;
 }
+
+.menu-cen a:hover{
+    transform: scale(1.3);
+    transition-duration: 0.4s;
+}
+
+.vuelos-dwn {
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+}
+
+.vuelos-dwn-btn{
+    border:none;
+    border-radius:5px;
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+    color: #F4F7F7;
+    background-color: #535c9100;
+}
+
+.vuelos-dwn-btn:hover{
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+    border-radius: 10px;
+
+}
+
+.vuelos-dwn-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+.vuelos-dwn:hover .vuelos-dwn-options {
+    display: block;
+    background-color: #535C91;
+    transition-duration: 0.4s;
+
+}
+
+.vuelos-dwn-options a{
+    display: block;
+    color:  #F4F7F7;
+    padding: 15px;
+    text-decoration: none;
+    padding:20px 40px;
+
+
+}
+
+.vuelos-dwn-options a:hover {
+    display: flex;
+    color: #F9F7F7;
+    background-color: #ffffff4f;
+    border-radius: 15px;
+    transform: scale(0.9);
+    transition-duration: 0.4s;
+}
+
+
+
 /* Boton CHECK-IN */
-.menu-der{
+.menu-btn{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
-.menu-der a {
+.menu-btn a {
     display: flex;
     justify-content: center;
-    width: 150px;
     text-decoration: none;
 }
 
-.menu-der a .checkin{ 
-    width: 125px;
-    height: 40px;
-    color: rgba(255, 255, 255, 0.822);
-    font-size: 20px; 
+.menu-btn a .checkin{ 
+    padding: 10px 10px;
+    color: #F9F7F7;
+    font-size: 16px; 
     font-family: "Poppins", sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     border-radius: 15px;
     background-color: rgba(83, 92, 145, 1);
     border: none;
-    box-shadow: 2px 3px 1px -1px rgba(0,0,0,0.49);
 }
 
-
+.menu-btn a button:hover{
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+    filter: drop-shadow(0 0 0.25rem rgba(255, 255, 255, 0.658));;
+}
 
 /*Cuadro del formulario de vuelo*/
 
-
+.formulario-vuelos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+}
 
 form{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 200px;
+
 }
 
 form fieldset{
     background-color: rgba(255, 255, 255, 0.901);
-    border-radius: 15px;
-    width: 70%;
-    height: 100px;
+    border-radius: 13px;
+    height: 120px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
 }
 
 form fieldset div{
-    display: inline-flex;
+    display: flex;
+    padding: 15px 15px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 form fieldset .trayectos{
@@ -178,20 +362,50 @@ form fieldset .trayectos{
 
 #origen{
     border-radius: 8px;
+    width: auto;
+    height: 26px;
 }
 
 #destino{
     border-radius: 8px;
+    width: auto;
+    height: 26px;
 }
 
 #fechas{
     border-radius: 8px;
+    width: auto;
+    height: 26px;
 }
 
 #hotel{
     border-radius: 8px;
+    width: auto;
+    height: 26px;
+}
+#num{
+    border-radius: 8px;
+    width: auto;
+    height: 26px;
 }
 
+.boton-input{
+    font-size:15px;
+    font-family: "Poppins", sans-serif;
+    font-weight:bold;
+    font-weight: 500;
+    color:rgba(255, 255, 255, 0.897);
+    background:#638cb5;
+    border:0px;
+    width:140px;
+    height:30px;
+    border-radius: 13px;
+}
+
+.boton-input:hover{
+    transform: scale(1.1);
+    background-color: #535c91;
+}
 
 .rounded-checkbox {
     width:20px;
@@ -209,72 +423,56 @@ form fieldset .trayectos{
     clip-path: circle(50% at 50% 50%);
     background-color: blue;
 }
+
+
 /*Cuadro del formulario de vuelo*/
+
 /*Iconos de redes sociales*/
 
 .contenedorIconos{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
+    margin-right: 40px;
+
 }
 
 .contenedorIconos a{
     text-decoration: none;
     padding: 5px;
+    border-radius: 20px;
+
 }
 
 .contenedorIconos a img{
     width: 30px;
-    height: 30px;
+    height: 30px;}
+
+.contenedorIconos a img:hover{
+    transform: scale(1.2);
+    
 }
 
 /*Parametros Main*/
 
 .mainTravels{
-    max-width: 100%;
-    min-height: 100vh;
-}
+    width: 100vw;}
 
 /* Descripcion Ciudades/Paises */
 .divInfo{
     position: relative;
     display: flex;
-    justify-content: start;
-    top: 40px;
-    left: 60px;
-}
+    height: 550px;
+    align-items: center;
+    justify-content: center;}
 
-.divInfo1{
-    position: relative;
-    display: flex;
-    justify-content: start;
-    top: 40px;
-    left: 80px;
-}
 .contDestino{
     display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.783);
-    width: 600px;
+    background-color: #0000008c;
     border-radius: 20px;
-}
-.contDestino1{
-    display: flex;
+    padding: 10px 10px;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.783);
-    width: 700px;
-    border-radius: 20px;
 }
-
-.contDestino2{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.783);
-    width: 700px;
-    border-radius: 20px;
-}
-
-
 
 .paisDest {
     position: relative;
@@ -282,16 +480,14 @@ form fieldset .trayectos{
     margin: 10px;
     font-size: 20px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.887);
-}
+    color: rgba(255, 255, 255, 0.87);}
 
 .ciudadDest{
     position: relative;
     text-align: center;
     font-size: 50px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.866);
-}
+    color: rgba(255, 255, 255, 0.856);}
 
 .desCiudad{
     position: relative;
@@ -299,7 +495,13 @@ form fieldset .trayectos{
     font-size: 18px;
     margin: 10px;
     font-weight: 200;
-    color: rgba(255, 255, 255, 0.865);
+    color: rgba(255, 255, 255, 0.815);
+}
+
+
+
+.contDestino p{
+    width: 800px;
 }
 
 /*Boton Compra*/
@@ -312,7 +514,7 @@ form fieldset .trayectos{
 
 .compraDiv p{
     font-family: "Poppins", sans-serif;
-    color: rgba(0, 0, 0, 0.689);
+    color: rgba(255, 255, 255, 0.932);
     font-size: 35px;
     font-weight: 800;
     font-style: normal;
@@ -340,7 +542,6 @@ form fieldset .trayectos{
     color: white;    
     font-weight: 500;
     letter-spacing: .0625rem;
-
 }
 
 /* Seccion Destinos Sugeridos */
@@ -348,11 +549,23 @@ form fieldset .trayectos{
 .container-boton-destinos{
     position: relative;
     display: flex;
-    justify-content: center;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: center;
     gap: 20px;
     top: 100px;
+}
+
+
+.contenedorDest{
+    gap: 2.5rem;
+    padding: 10px 15px 10px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.509);
+    justify-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
 }
 
 .destinosRec{
@@ -365,39 +578,26 @@ form fieldset .trayectos{
     align-items: center;
 }
 
-.destino1 .card-im a:hover {
-    background: rgba(0, 0, 0, 0.637);
-}
 
-.contenedorDest{
-    gap: 2.5rem;
-    padding: 20px 30px 20px 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color: rgba(255, 255, 255, 0.509);
-    justify-items: center;
-    border-radius: 20px;
-    box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
-
-}
-.card-img {
-    width: 400px;
-    height: 500px;
-    border-radius: 20px;
+.destino .card-img {
+    width: 350px;
+    height: 400px;
     overflow: hidden;
+    filter: grayscale(40%);
 }
 
 .card-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 13px;
 }
 
 
 
 .dest-info{
     position: absolute;
-    width: 400px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     margin-top: -90px;
@@ -405,339 +605,45 @@ form fieldset .trayectos{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: #535C91;
+    background-color: #535c91f6;
 }
 
 .dest-info .dest-pais{
-    color: #ffffff;
+    color: #fffffff5;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     letter-spacing: 1px;
+    margin-left: 10px;
+    margin-top: 8px;
 }
 
 .dest-info .dest-ciudad{
     font-size: 40px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    color: #ffffff;
+    color: #fffffff5;
     letter-spacing: 3px;
-
-}
-/*Seccion Hoteles*/
-.divHotel{
-    width: 100%;
-    height: 500px;
-    margin-top: 200px;
-    display: flex;
-    justify-content: center;
-}
-
-.card-hotel{
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    display: flex;
-}
-
-.textoDiv{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.card-hotel img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tituloHotel{
-    text-align: center;
-    font-size: 350px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.855);
-    letter-spacing: 5px;
-}
-.parrafoHotel{
-    text-align: center;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: rgba(255, 255, 255, 0.855);
-    font-size: 35px;
-    letter-spacing: 15px;
-}
-
-.seccionHoteles{
-    position: relative;
-    display: flex;
-    justify-content: center;
+    margin-left: 10px;
 
 }
 
-.container-hoteles{
-    gap: 10px;
-    padding: 40px;
-    margin: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    border-radius: 20px;
-    justify-items: center;
-    background: #ffffffca;
-    overflow: hidden;
-    box-shadow: 1px 1px 23px -5px rgba(0,0,0,0.8);
+.botonCompra:hover{
+    transform: scale(1.1);
 }
-
-.hotel-info{
-    padding: 15px;
-}
-
-.hotel1 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-
-.hotel2 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel3 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel4 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel5 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel6 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel7 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel8 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel9 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel10 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel11 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel12 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel13 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel14 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel15 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel16 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel17 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-
-}
-
-.hotel18 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-
-}
-
-.hotel19 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-
-}
-
-.hotel20 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel21 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-
-}
-
-.hotel22 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-
-}
-
-.hotel23 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel24 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-
-.hotel25 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel26 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;   
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-
-}
-
-.hotel27 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel28 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
-.hotel29 {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.905);
-}
-
 /*Pseudo clases */ 
-#destinosSugeridos img:hover{
-    filter:saturate(2);
+.contenedorDest .destino:hover{
+    transform: scale(1.1);
+    transition-duration: 0.10s;
+    transition: 0.25s ease-in-out;
+    filter: saturate(1.8);
+    border-radius: 13px;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.356));
+}
+
+.destino .card-img img:hover{
+    filter: grayscale(0%) saturate(1.4);
+    
 }
 /*Pseudo clases */ 
 /*Pseudo Elemento*/
@@ -765,197 +671,223 @@ span[data-descr]:focus::after {
 }
 /*Pseudo Elemento*/
 
-.hotel1 img{
-    width: 100%;
+
+
+/*Seccion Hoteles*/
+.divHotel{
+    width: 100vw;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+/*Mini Seccion Reseñas*/
+.reseñas-hotel{
+    position: relative;
+}
+
+.reseña{
+    display: flex;
+    justify-content: center;
+    gap: 6.25rem;
+    padding: 40px 40px;
+    align-items: center;
+}
+.titulo-reseña{
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 30px;
+}
+.cliente{
+    display: flex;
+    background-color: #ffffffdc;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    padding: 50px 40px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.div-img-cliente{
+    width: 200px;
     height: 200px;
+    padding: 20px 20px;
+    align-content: center;
+}
+.div-img-cliente img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     object-fit: cover;
 }
 
-
-.hotel2 img{
+.cliente:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+/*Mini Seccion Reseñas*/
+.card-hotel{
+    position: relative;
     width: 100%;
-    height: 200px;
+    height: 500px;
+}
+
+.hotel-img{ 
+    width: 500px;
+    height: 400px;
+}
+.textoDiv{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.divHotel img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-
-.hotel3 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.tituloHotel{
+    font-size: 350px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.855);
+    letter-spacing: 5px;
 }
 
-
-.hotel4 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.parrafoHotel{
+    position: relative;
+    top:100px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.855);
+    font-size: 35px;
+    letter-spacing: 15px;
 }
 
-
-
-.hotel5 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.seccionHoteles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 50px;
 }
 
-
-.hotel6 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.container-hoteles{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    gap: 40px 40px;
+    justify-content: space-around;
+    overflow: hidden;
 }
 
-
-.hotel7 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.hotel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 700px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: rgba(27, 26, 85, 0.897);
+    box-shadow: 1px 1px 23px -5px rgba(0,0,0,0.8);
 }
 
-
-.hotel8 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.hotel-img {
+    width: 550px;
+    background: rgba(255, 255, 255, 0.905);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
 }
 
-.hotel9 img{
+.hotel-img img{
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover;}
+
+
+
+
+.icono-img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
 }
 
-.hotel10 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel11 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel12 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel13 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel14 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel15 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel16 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel17 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel18 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel19 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel20 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel21 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.hotel22 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel23 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel24 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel25 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel26 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel27 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel28 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.hotel29 img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.hotel-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom-right-radius:  10px;
+    border-bottom-left-radius:  10px;
 }
 
 
 
 
+/* Rating Estrellas */
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
 
+.estrellas {
+    font-size: 18px;
+    color: rgb(255, 218, 7);
+}
+
+.divHotelInfo p{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.divHotelInfo p:nth-child(1){
+    font-size: 20px;
+    font-weight: 600;
+}
+.divHotelInfo p:nth-child(2){
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.divHotelInfo .disclaimer-info{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.514);
+}
+/* Rating Estrellas */
+
+/**Boton Reserva*/
+.botonReserva{
+    width: 100px;
+    height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ff9100c0;
+    margin-top: 13px;
+    padding: 13px;
+    border-radius: 12px;
+    align-content: center;
+    transition: all 0.4s ease 0s;
+}
+
+.botonReserva:hover{
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    border-radius: 12px;
+}
+/**Boton Reserva*/
 /** Pagina destinos **/
 
-.mainDestinos{
-    position: relative;
-    top: 150px;
-}
 .destinosInternacionales{
     display: flex;
     justify-content: center;
@@ -971,148 +903,13 @@ span[data-descr]:focus::after {
 
 .contenDest{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     align-content: center;
     gap: 2.1875rem;
     padding: 60px;
 }
 
-.cardDest1{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest2{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest3{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest4{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest5{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest6{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest7{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-.cardDest8{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest9{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest10{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest11{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest12{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDest13{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDes14{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDes15{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDes16{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.cardDes17{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.125rem;
-    overflow: hidden;
-    box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-}
-
-.contenDest .cardDest1 p{
+.contenDest .cardDest p{
     font-size: 20px;
     border: 1px solid black;
     overflow: hidden;
@@ -1120,9 +917,8 @@ span[data-descr]:focus::after {
 }
 
 .card-img-dest{
-    width: 100%;
-    height: 25rem;
-    object-fit: cover;
+    width: 280px;
+    height: 500px;    
 }
 
 .card-img-dest img{
@@ -1152,1275 +948,161 @@ span[data-descr]:focus::after {
     align-content: center;
 }
 
-/* Color Theme Swatches in RGBA */
-.Diseño-gráfico-1-rgba { color: rgba(98, 32, 191, 1); }
-.Diseño-gráfico-2-rgba { color: rgba(109, 51, 191, 1); }
-.Diseño-gráfico-3-rgba { color: rgba(125, 78, 191, 1); }
-.Diseño-gráfico-4-rgba { color: rgba(138, 101, 191, 1); }
-.Diseño-gráfico-5-rgba { color: rgba(183, 160, 216, 1); }
+/* PAGINA VUELOS */
+
+/**Vuelos Internacionales**/
+.container-vuelos{
+    position: relative;
+    top: 9.375rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.titulo-vuelos-internacionales{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.vuelos-internacionales{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
 
 
+.vuelos-nacionales{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+.boton-compra-vuelo{
+    position: relative;
+    background: linear-gradient(32deg, rgba(83,92,145,0.958420868347339) 0%, rgba(80,96,189,0.9472163865546218) 100%);
+    padding: 10px 10px;
+    border-radius: 15px;
+    width: 80px;
+}
+.boton-compra-vuelo p{
+    font-weight: 400;
+    color: white;
+}
 
+.boton-compra-vuelo:hover{
+    transform:  scale(1.1);
 
+}
 
+/**Card Vuelos**/
+.vuelo {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.vuelo:hover{
+    box-shadow: rgba(0, 0, 0, 0.76) 0px 3px 8px;
+    border: 1px rgba(0, 0, 0, 0.527) solid;
+}
+.vuelo-img{
+    width: 355px;
+    height: 400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+}
+
+.vuelo-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vuelo-img img:hover{
+    transform: scale(1.2);
+    transition: 1s ease-in-out;
+}
+
+.vuelo-info {
+    display: flex;  
+    width: 355px;
+    flex-direction: column;
+    padding: 20px 20px 20px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px rgba(0, 0, 0, 0.527) solid;
+}
+
+.vuelo-info h3{
+    font-weight: 600;
+
+}
+
+.vuelo-destino{
+    width: 200px    ;
+}
+
+.vuelo-info .vuelo-origen p:nth-child(3){
+    font-weight: 500;
+}
+
+.vuelo-info .vuelo-destino p:nth-child(3){
+    font-weight: 500;
+}
+/**Card Vuelos**/
+/* PAGINA CONTACTO */
 
 
 
 
 /*Responsive - Media Querries*/
 
-@media (min-width: 2560px) {
-    .bgCard{
-        width: 100%;
-        height: 45%;
-    }
-    
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+@media (max-width: 2560px) {
+
 }
 
 
-@media (min-width: 1920px) {
-    .bgDestinos{
-        overflow-x: hidden;
-    }
-    .bgCard{
-        width: 100%;
-        height: 45%;
-    }
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-        /*Seccion Destinos*/
-        .destinosInternacionales{
-            font-size: 45px;
-            color: rgba(0, 0, 0, 0.836);
-            background-color: rgba(255, 255, 255, 0.753);
-        }
-        .destNacionales{
-            font-size: 45px;
-        }
-        .contenDest{
-            gap: 30px;
-            padding: 50px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            justify-items:  center;
-        }
-        .contenDest2{
-            gap: 30px;
-            padding: 50px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            justify-items:  center;
-        }
-        
-        .cardDest1{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest2{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest3{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest4{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest5{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest6{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest7{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest8{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest9{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest10{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest11{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest12{
-            width: 350px;
-            height: 400px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-
+@media (max-width: 1920px) {
 }
 
 
 @media (max-width: 1440px) {
-    .bgCard{
-        width: 100%;
-        height: 45%;
-    }
-    
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .bgCard{
-        width: 100%;
-    }
-    
-    .bgDestinos{
-        width: 100%;
-        height: 100vh;
-    }
-    /*MAIN*/
-    .mainDestinos{
-        position: relative;
-        top: 220px;
-    }
-        /*HEADER*/
-    /*navbar Destinos*/
-    .navBar{
-        width: 100vw;
-        display: flex;
-        align-items: center;
-    }
-
-    .navBar .menu-izq a{
-        font-size: 32px;
-    }
-
-    .menu-cen{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5625rem;
-    }
-
-    .menu-cen li{
-        font-size: 20px;
-    }
-    /*boton CHECK-IN*/
-    .menu-der a {
-        width: 120px;
-    }
-    
-    .menu-der a .checkin{ 
-        width: 115px;
-        height: 45px;
-        font-size: 18px; 
-    }
-        
-    /*Seccion Destinos*/
-    .destinosInternacionales{
-        font-size: 45px;
-        color: rgba(0, 0, 0, 0.836);
-        background-color: rgba(255, 255, 255, 0.753);
-    }
-    .destNacionales{
-        font-size: 45px;
-    }
-    .contenDest{
-        gap: 20px;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        justify-items:  center;
-    }
-    .contenDest2{
-        gap: 30px;
-        padding: 50px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
-        grid-template-rows: auto;
-        justify-items:  center;
-    }
-    
-    .cardDest1{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest2{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest3{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest4{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest5{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest6{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest7{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest8{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest9{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest10{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest11{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest12{
-        width: 300px;
-        height: 400px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .card-img-dest{
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }    
 
 }
 
 @media (max-width: 1024px) {
-    .bgCard{
-        width: 100%;
-        height: 45%;
-    }
-    
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .mainDestinos{
-        position: relative;
-        top: 180px;
-    }
-    /*HEADER*/
-    /*navbar Destinos*/
-    .navBar{
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-    }
 
-    .navBar .menu-izq a{
-        font-weight: 400;
-        font-style: normal;
-        font-size: 32px;
-    }
-
-    .menu-cen{
-        display: flex;
-        align-items: center;
-        gap: .625rem;
-    }
-
-    .menu-cen li{
-        list-style: none;
-        font-family: "Poppins", sans-serif;
-        font-size: 18px;
-    }
-    /*boton CHECK-IN*/
-    .menu-der{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .menu-der a {
-        display: flex;
-        justify-content: center;
-        width: 85px;
-        text-decoration: none;
-    }
-    
-    .menu-der a .checkin{ 
-        width: 155px;
-        height: 30px;
-        font-size: 13px; 
-    }
-    /*Seccion Destinos*/
-    .destinosInternacionales{
-        font-size: 35px;
-    }
-    .destNacionales{
-        font-size: 35px;
-    }
-    .contenDest{
-        gap: 20px;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        justify-items:  center;
-    }
-    .contenDest2{
-        gap: 30px;
-        padding: 50px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        justify-items:  center;
-    }
 }
 
 @media (max-width: 768px) {
-    .bgCard{
-        width: 100%;
-        height: 35%;
-    }
-    
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .mainDestinos{
-        position: relative;
-        top: 180px;
-    }
 
-
-        /*HEADER*/
-    /*navbar Destinos*/
-    .navBar{
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-    }
-
-    .navBar .menu-izq a{
-        font-weight: 400;
-        font-size: 20px;
-    }
-
-    .menu-cen{
-        display: flex;
-        align-items: center;
-        gap: .1875rem;
-    }
-
-    .menu-cen li{
-        list-style: none;
-        font-family: "Poppins", sans-serif;
-        font-size: 15px;
-    }
-    /*boton CHECK-IN*/
-    .menu-der{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .menu-der a {
-        display: flex;
-        justify-content: center;
-        width: 85px;
-        text-decoration: none;
-    }
-    
-    .menu-der a .checkin{ 
-        width: 115px;
-        height: 30px;
-        font-size: 13px; 
-    }
-    /*Seccion Destinos*/
-    .destinosInternacionales{
-        font-size: 25px;
-    }
-    .destNacionales{
-        font-size: 25px;
-    }
-    .contenDest{
-        gap: 10px;
-        padding: 15px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        justify-items:  center;
-    }
-    .contenDest2{
-        gap: 10px;
-        padding: 15px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        justify-items:  center;
-    }
-    .cardDest1{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest2{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest3{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest4{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest5{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest6{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest7{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest8{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest9{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest10{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest11{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }   
-    .cardDest12{
-        width: 200px;
-        height: 320px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }      
-    .card-img-dest{
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    } 
 }
 @media (max-width: 599px) {
-            /*HEADER*/
-    /*navbar Destinos*/
-    .navBar{
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-    }
 
-    .navBar .menu-izq a{
-        font-weight: 400;
-        font-size: 20px;
-    }
-
-    .menu-cen{
-        display: flex;
-        align-items: center;
-        gap: .1875rem;
-    }
-
-    .menu-cen li{
-        list-style: none;
-        font-family: "Poppins", sans-serif;
-        font-size: 15px;
-    }
-            /*Seccion Destinos*/
-            .destinosInternacionales{
-                font-size: 20px;
-            }
-            .destNacionales{
-                font-size: 20px;
-            }
-            .contenDest{
-                gap: 15px;
-                padding: 15px;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: auto;
-                justify-items:  center;
-            }
-            .contenDest2{
-                gap: 15px;
-                padding: 15px;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: auto;
-                justify-items:  center;
-            }
-            .cardDest1{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest2{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest3{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest4{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest5{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest6{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest7{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest8{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest9{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest10{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest11{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .cardDest12{
-                width: 180px;
-                height: 280px;
-                border-radius: 1.125rem;
-                overflow: hidden;
-                box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-            }   
-            .card-img-dest{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }       
 }
 
 
 @media (max-width: 427px) {
-    .bgCard{
-        width: 100%;
-        height: 35%;
-    }
-    
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .mainDestinos{
-        position: relative;
-        top: 150px;
-    }
-        /*HEADER*/
-    /*navbar Destinos*/
-    .navBar{
-        width: 100%;
-        height: 215px;
-        display: flex;
-        flex-direction: column;
-    }
 
-    .navBar .menu-izq a{
-        font-weight: 400;
-        font-size: 20px;
-    }
-
-    .menu-cen{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .0125rem;
-    }
-
-    .menu-cen li{
-        list-style: none;
-        font-size: 13px;
-    }
-    /*boton CHECK-IN*/
-    .menu-der{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-    }
-    
-    .menu-der a {
-        display: flex;
-        justify-content: center;
-        width: 85px;
-        text-decoration: none;
-    }
-    
-    .menu-der a .checkin{ 
-        width: 80px;
-        height: 30px;
-        font-size: 11px; 
-    }
-        /*Seccion Destinos*/
-        .destinosInternacionales{
-            font-size: 20px;
-        }
-        .destNacionales{
-            font-size: 20px;
-        }
-        .contenDest{
-            gap: 15px;
-            padding: 15px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            justify-items:  center;
-        }
-        .contenDest2{
-            gap: 15px;
-            padding: 15px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            justify-items:  center;
-        }
-        .cardDest1{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest2{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest3{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest4{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest5{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest6{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest7{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest8{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest9{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest10{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest11{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .cardDest12{
-            width: 180px;
-            height: 280px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }   
-        .card-img-dest{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 }
 
 @media (max-width: 376px) {
-    .bgCard{
-        width: 100%;
-        height: 45%;
-    }
-    
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    /*HEADER*/
-    /*navbar Destinos*/
-    .navBar{
-        width: 100%;
-        height: 190px;
-        display: flex;
-        flex-direction: column;
-    }
 
-    .navBar .menu-izq a{
-        font-weight: 400;
-        font-size: 20px;
-    }
-
-    .menu-cen{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .0125rem;
-    }
-
-    .menu-cen li{
-        list-style: none;
-        font-size: 13px;
-    }
-    /*boton CHECK-IN*/
-    .menu-der{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-    }
-    
-    .menu-der a {
-        display: flex;
-        justify-content: center;
-        width: 85px;
-        text-decoration: none;
-    }
-    
-    .menu-der a .checkin{ 
-        width: 80px;
-        height: 30px;
-        font-size: 11px; 
-    }
-        /*Seccion Destinos*/
-
-        .destinosInternacionales{
-            font-size: 15px;
-        }
-        .destNacionales{
-            font-size: 15px;
-        }
-        
-        .contenDest{
-            gap: 15px;
-            padding: 15px;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            align-content: center;
-        }
-    
-        .contenDest2{
-            gap: 15px;
-            padding: 15px;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            align-content: center;
-        }
-        .cardDest1{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest2{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest3{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest4{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest5{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest6{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest7{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest8{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest9{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest10{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest11{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        .cardDest12{
-            width: 150px;
-            height: 180px;
-            border-radius: 1.125rem;
-            overflow: hidden;
-            box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-        }
-        
-        .card-img-dest{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 }
 
 @media (max-width: 320px) {
-    .bgCard{
-        width: 100%;
-        height: 45%;
-    }
-    
-    .bgImg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .bgDestinos{
-        width: 100%;
-        height: 100vh;
-    }
-        /*HEADER*/
-    /*navbar Destinos*/
-    .navBar{
-        width: 100%;
-        height: 220px;
-        display: flex;
-        flex-direction: column;
-    }
 
-    .navBar .menu-izq a{
-        font-weight: 400;
-        font-size: 20px;
-    }
-
-    .menu-cen{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .0125rem;
-    }
-
-    .menu-cen li{
-        list-style: none;
-        font-size: 13px;
-    }
-    /*boton CHECK-IN*/
-    .menu-der{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-    }
-    
-    .menu-der a {
-        display: flex;
-        justify-content: center;
-        width: 85px;
-        text-decoration: none;
-    }
-    
-    .menu-der a .checkin{ 
-        width: 80px;
-        height: 30px;
-        font-size: 11px; 
-    }
-    /*MAIN*/
-    .mainDestinos{
-        position: relative;
-        top: 150px;
-    }
-    /*Seccion Destinos*/
-    .destinosInternacionales{
-        font-size: 15px;
-        color: rgba(0, 0, 0, 0.836);
-        background-color: rgba(255, 255, 255, 0.753);
-    }
-    .destNacionales{
-        font-size: 15px;
-    }
-    
-    .contenDest{
-        gap: 15px;
-        padding: 15px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        align-content: center;
-    }
-    .contenDest2{
-        gap: 15px;
-        padding: 15px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        align-content: center;
-    }
-    .cardDest1{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest2{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest3{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest4{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest5{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest6{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest7{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest8{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest9{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest10{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest11{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .cardDest12{
-        width: 125px;
-        height: 150px;
-        border-radius: 1.125rem;
-        overflow: hidden;
-        box-shadow: 8px 6px 5px rgba(0, 0, 0, 0.412);
-    }
-    .card-img-dest{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .contenDest2{
-        display: grid;
-        gap: 2.1875rem;
-        padding: 30px;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-    }
-    .card-img-dest{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .contenDest .cardDest1 p{
-        font-size: 10px;
-        border: 1px solid black;
-        overflow: hidden;
-        background-color: rgb(255, 255, 255);
-    }
 }

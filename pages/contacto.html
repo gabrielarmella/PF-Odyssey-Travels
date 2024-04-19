@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content ="IE-edge"> 
@@ -9,29 +9,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/img/travel-odyssey_1.ico" type="image/x-icon">
 </head>
-<body class="destBariloche">
+<body>
     <header>
-        <nav class="navBar">
-            <div class="menu-izq">
-                <a href="../pages/inicio.html">Odyssey Travels</a>
+        <nav class="navBar"> 
+            <div class="menu-izquierda">
+                <img src="../assets/img/travel-odyssey(1).png" alt="">
+                <a href="../pages/inicio.html"><p>Odyssey</p><p>Travels</p></a>
             </div>
-            <ul class="menu-cen">
-                <li><a href="../pages/inicio.html">INICIO</a></li>
-                <li><a href="../pages/destinos.html">DESTINOS</a></li>
-                <li><a href="../pages/ofertas.html">OFERTAS</a></li>
-                <li><a href="../pages/vacaciones.html">VACACIONES</a></li>
-                <li><a href="../pages/vuelos.html">VUELOS</a></li>
-                <li><a href="../pages/contacto.html">CONTACTO</a></li>
-            </ul>
-            <div class="menu-der">
-                <a href="../pages/check-in.html">
-                    <button class="checkin">CHECK-IN</button>
-                </a>
-            </div>
-        </nav>
+                <div class="menu-derecha">
+                <ul class="menu-cen">
+                    <li><a href="../pages/inicio.html">inicio</a></li>
+                    <li><a href="../pages/destinos.html">destinos</a></li>
+                    <li><a href="../pages/ofertas.html">ofertas</a></li>
+                    <li><a href="../pages/vacaciones.html">vacaciones</a></li>
+                    <li><a href="../pages/contacto.html">contacto</a></li>
+                </ul>
+                <div class="vuelos-dwn">
+                    <button class="vuelos-dwn-btn">vuelos</button>
+                    <div class="vuelos-dwn-options">
+                        <a href="./vuelos-internacionales.html">Internacionales</a>
+                        <a href="./vuelos-nacionales.html">nacionales</a>
+                    </div>
+                </div>
+                <div class="menu-btn">
+                    <a href="../pages/check-in.html">
+                        <button class="checkin">CHECK-IN</button>
+                    </a>
+                </div>
+                </div>
+            </nav>
     </header>
     <main>
+        <div class="container">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@email.com">
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <label for="exampleDataList" class="form-label">Destinos</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Buscar destinos...">
+            <datalist id="datalistOptions">
+            <option value="San Francisco">
+            <option value="New York">
+            <option value="Marruecos">
+            <option value="Los Angeles">
+            <option value="Italia">
+            </datalist>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Pasajeros</option>
+                <option value="1">Uno</option>
+                <option value="2">Dos</option>
+                <option value="3">Tres</option>
+            </select>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </div>
         <h1>CONTACTO</h1>
     </main>
     <footer class="footer">

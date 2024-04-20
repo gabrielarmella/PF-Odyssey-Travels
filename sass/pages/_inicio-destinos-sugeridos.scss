@@ -1,0 +1,434 @@
+
+.mainTravels{
+    width: 100vw;}
+
+
+
+/*Iconos de redes sociales*/
+
+.contenedorIconos{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 40px;
+
+}
+
+.contenedorIconos a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 20px;
+
+}
+
+.contenedorIconos a img{
+    width: 30px;
+    height: 30px;}
+
+.contenedorIconos a img:hover{
+    transform: scale(1.2);
+}
+
+/*Cuadro del formulario de vuelo*/
+
+.formulario-vuelos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+}
+
+#form-vuelo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#form-vuelo fieldset{
+    background-color: rgba(255, 255, 255, 0.901);
+    border-radius: 13px;
+    height: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+
+#form-vuelo fieldset div{
+    display: flex;
+    padding: 15px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#form-vuelo fieldset .trayectos{
+    padding-left: 10px;
+}
+
+#origen{
+    border-radius: 8px;
+    width: auto;
+    height: 26px;
+}
+
+#destino{
+    border-radius: 8px;
+    width: auto;
+    height: 26px;
+}
+
+#fechas{
+    border-radius: 8px;
+    width: auto;
+    height: 26px;
+}
+
+#hotel{
+    border-radius: 8px;
+    width: auto;
+    height: 26px;
+}
+#num{
+    border-radius: 8px;
+    width: auto;
+    height: 26px;
+}
+
+.boton-input{
+    font-size:15px;
+    font-family: "Poppins", sans-serif;
+    font-weight:bold;
+    font-weight: 500;
+    color:rgba(255, 255, 255, 0.897);
+    background:#638cb5;
+    border:0px;
+    width:140px;
+    height:30px;
+    border-radius: 13px;
+}
+
+.boton-input:hover{
+    transform: scale(1.1);
+    background-color: #535c91;
+}
+
+.rounded-checkbox {
+    width:20px;
+    height: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid black;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.rounded-checkbox:checked {
+    appearance: auto;
+    clip-path: circle(50% at 50% 50%);
+    background-color: blue;
+}
+
+
+/*Cuadro del formulario de vuelo*/
+
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+    margin: auto;
+    z-index: -1;
+}
+
+.slideshow-container .mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Oculta las imagenes por defecto */
+.mySlides {
+    display: none;
+    height: 1000px;
+}
+
+/* Next & previous botones */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+  /* Posiciona el "next button" a  la derecha */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+  /* En hover, añade un fondo de color negro color  */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+  /* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+  /* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+  /* Los dots/bullets/indicadores */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+  /* Fading animacion */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/**Slide Show Imagenes**/
+/* Descripcion Ciudades/Paises */
+.divInfo{
+    position: relative;
+    display: flex;
+    height: 550px;
+    align-items: center;
+    justify-content: center;}
+
+.contDestino{
+    display: flex;
+    background-color: #0000008c;
+    border-radius: 20px;
+    padding: 10px 10px;
+    flex-direction: column;
+}
+
+.paisDest {
+    position: relative;
+    text-align: start;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.87);}
+
+.ciudadDest{
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.856);}
+
+.desCiudad{
+    position: relative;
+    text-align: start;
+    font-size: 18px; 
+    margin: 10px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.815);
+}
+
+
+
+.contDestino p{
+    width: 800px;
+}
+
+
+.container-boton-destinos{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    top: 100px;
+}
+
+.contenedorDest{
+    gap: 2.5rem;
+    padding: 10px 15px 10px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.509);
+    justify-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
+}
+
+
+.destino .card-img {
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+    filter: grayscale(40%);
+}
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.dest-info{
+    position: absolute;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -90px;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #535c91f6;
+}
+
+.dest-info .dest-pais{
+    color: #fffffff5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.dest-info .dest-ciudad{
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #fffffff5;
+    letter-spacing: 3px;
+    margin-left: 10px;
+
+}
+
+/*Boton Compra*/
+.compraDiv{
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    margin-top: 40px;
+    p{
+        font-family: "Poppins", sans-serif;
+        color: rgba(255, 255, 255, 0.932);
+        font-size: 35px;
+        font-weight: 800;
+        font-style: normal;
+        text-align: end;
+        letter-spacing: .0625rem;
+        
+    }
+}
+
+
+.botonCompra{
+    width: 200px;
+    height: 80px;
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    border: 1px;
+    box-shadow: 5px 7px 3px -1px rgba(0,0,0,0.49);
+    p{
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        color: white;    
+        font-weight: 500;
+        letter-spacing: .0625rem;
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+/*Boton Compra*/
+
+/*Pseudo clases */ 
+.contenedorDest .destino:hover{
+    transform: scale(1.1);
+    transition-duration: 0.10s;
+    transition: 0.25s ease-in-out;
+    filter: saturate(1.8);
+    border-radius: 13px;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.356));
+}
+
+.destino .card-img img:hover{
+    filter: grayscale(0%) saturate(1.4);
+    
+}
+/*Pseudo clases */ 
+
+/*Pseudo Elemento*/
+span[data-descr] {
+    position: relative;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0);
+    cursor: help;
+}
+
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    top: 24px;
+    min-width: 100px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #ffffcc;
+    padding: 12px;
+    color: #000000;
+    font-size: 14px;
+    z-index: 1;
+}
+/*Pseudo Elemento*/
+

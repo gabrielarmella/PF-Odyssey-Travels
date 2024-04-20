@@ -21,7 +21,7 @@
                 <div class="menu-derecha">
                 <ul class="menu-cen">
                     <li><a href="../pages/inicio.html">inicio</a></li>
-                    <li><a href="../pages/destinos.html">destinos</a></li>
+                    <li><a href="../pages/hoteles.html">hoteles</a></li>
                     <li><a href="../pages/ofertas.html">ofertas</a></li>
                     <li><a href="../pages/vacaciones.html">vacaciones</a></li>
                     <li><a href="../pages/contacto.html">contacto</a></li>
@@ -29,49 +29,53 @@
                 <div class="vuelos-dwn">
                     <button class="vuelos-dwn-btn">vuelos</button>
                     <div class="vuelos-dwn-options">
-                        <a href="./vuelos-internacionales.html">Internacionales</a>
-                        <a href="./vuelos-nacionales.html">nacionales</a>
+                        <a href="../pages/vuelos-internacionales.html">Internacionales</a>
+                        <a href="../pages/vuelos-nacionales.html">nacionales</a>
                     </div>
                 </div>
                 <div class="menu-btn">
                     <a href="../pages/check-in.html">
-                        <button class="checkin">CHECK-IN</button>
+                        <button class="checkin">check-in</button>
                     </a>
                 </div>
                 </div>
             </nav>
     </header>
-    <main>
-        <div class="container">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@email.com">
+    <main class="mainContacto">
+        <div class="texto-contacto">
+            <div>
+                <h1>CONTACTANOS</h1>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-            </div>
-            <label for="exampleDataList" class="form-label">Destinos</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Buscar destinos...">
-            <datalist id="datalistOptions">
-            <option value="San Francisco">
-            <option value="New York">
-            <option value="Marruecos">
-            <option value="Los Angeles">
-            <option value="Italia">
-            </datalist>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Pasajeros</option>
-                <option value="1">Uno</option>
-                <option value="2">Dos</option>
-                <option value="3">Tres</option>
-            </select>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div >
+                <h4 style="text-align: center">Queremos saber tu opinion</h4>
             </div>
         </div>
-        <h1>CONTACTO</h1>
+        <div class="contenedorContacto">
+            <form id="contacto" action="" method="post">
+                <fieldset>
+                    <input placeholder="Su nombre" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Su email" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Su numero de celular/fijo (opcional)" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Escriba su mensaje (160 caracteres max)" tabindex="4" name="" id="" cols="30" rows="10" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contacto-submit" data-submit="...enviando">Enviar</button>
+                </fieldset>
+                <p class="copyright">Designed by <a title="Colorlib">Gabriel</a></p>
+            </form>
+            <div class="video-contacto">
+                <video autoplay muted playsinline>
+                    <source src="../assets/video/video (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    </div>
     </main>
     <footer class="footer">
         <p>Esto es un footer</p>

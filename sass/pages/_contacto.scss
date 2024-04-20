@@ -1,0 +1,129 @@
+.mainContacto{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-contacto{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.texto-contacto h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: rgba(37, 37, 37, 0.815);
+}
+.texto-contacto h4{
+    font-size: 20px;
+    color: rgba(37, 37, 37, 0.842);
+    font-weight: 500;
+}
+
+.contenedorContacto{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 80px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+/**Form**/
+#contacto {
+    width: 550px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+}
+
+#contacto fieldset {
+    display: flex;
+    border: medium none !important;
+    width: 100%;
+}
+
+
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto input[type="tel"],
+#contacto textarea{
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    border-radius: 10px;
+}
+
+
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto input[type="tel"],
+#contacto textarea {
+    width: 450px;
+    padding: 20px;
+    background-color: white;
+    margin: 25px;
+}
+
+#contacto input[type="text"]:hover,
+#contacto input[type="email"]:hover,
+#contacto input[type="tel"]:hover,
+#contacto textarea:hover{
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #e00c0c;
+}
+
+#contacto textarea {
+    height: 180px;
+    width: 450px;
+    resize: none;
+}
+
+#contacto button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+
+#contacto button[type="submit"]:hover{
+    transform: scale(0.9);
+    transition-duration: 0.40s;
+
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+#contacto .copyright{
+    display: flex;
+    justify-content: center;
+}
+/*Video*/
+.video-contacto{
+    width: 350px;
+    height: 800px;
+    top: 80px;
+    left: 500px;
+}
+.video-contacto video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+}

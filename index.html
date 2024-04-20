@@ -21,7 +21,7 @@
                 <img src="./assets/img/travel-odyssey(1).png" alt="">
                 <a href="./pages/inicio.html"><p>Odyssey</p><p>Travels</p></a>
             </div>
-                <div class="menu-derecha">
+            <div class="menu-derecha">
                 <ul class="menu-cen">
                     <li><a href="./pages/inicio.html">inicio</a></li>
                     <li><a href="./pages/hoteles.html">hoteles</a></li>
@@ -32,8 +32,8 @@
                 <div class="vuelos-dwn">
                     <button class="vuelos-dwn-btn">vuelos</button>
                     <div class="vuelos-dwn-options">
-                        <a href="./vuelos-internacionales.html">Internacionales</a>
-                        <a href="./vuelos-nacionales.html">nacionales</a>
+                        <a href="./pages/vuelos-internacionales.html">Internacionales</a>
+                        <a href="./pages/vuelos-nacionales.html">nacionales</a>
                     </div>
                 </div>
                 <div class="menu-btn">
@@ -41,56 +41,63 @@
                         <button class="checkin">check-in</button>
                     </a>
                 </div>
-                </div>
-            </nav>
+            </div>
+        </nav>
     </header>
     <main class="mainTravels">
         <!--Social Media-->
         <div class="contenedorIconos">
-            <a href="https://www.facebook.com/" class="fb"><img src="./assets/img/Iconos/facebook-icon.png" alt="icono facebook"></a>
-            <a href="https://twitter.com/" class="tw"><img src="./assets/img/Iconos/twitter-icon.png" alt="icono twitter"></a>
-            <a href="https://www.instagram.com/" class="in"><img src="./assets/img/Iconos/instagram-icon.png" alt="icono instagram"></a>
+            <a href="https://www.facebook.com/" class="fb"><img src="./assets/img/Iconos/facebook-01.png" alt="icono facebook"></a>
+            <a href="https://twitter.com/" class="tw"><img src="./assets/img/Iconos/twiiter-03.png" alt="icono twitter"></a>
+            <a href="https://www.instagram.com/" class="in"><img src="./assets/img/Iconos/instagram-02.png" alt="icono instagram"></a>
         </div>  
         <div class="formulario-vuelos">
-            <form action="">
+            <form id="form-vuelo" action="">
                 <fieldset>
-                    <div class="trayectos">
-                        <label for="check" id="check">Vuelta</label>
-                        <input type="checkbox" class="rounded-checkbox" id="check">
-                        <label for="check" id="check">Ida</label>
-                        <input type="checkbox" class="rounded-checkbox" id="check">
-                        <label for="check" id="check">Multiples Trayectos</label>
-                        <input type="checkbox" class="rounded-checkbox" id="check">
+                    <div>
+                        <label for="vuelta" id="check">Vuelta</label>
+                        <input type="checkbox" class="rounded-checkbox" id="vuelta">
+                        <label for="ida" id="check">Ida</label>
+                        <input type="checkbox" class="rounded-checkbox" id="ida">
+                        <label for="multiples trayectos" id="check">Multiples Trayectos</label>
+                        <input type="checkbox" class="rounded-checkbox" id="multiples trayectos">
                     </div>
                     <div>
-                        <label for="Origen">Desde:</label>
+                        <label for="origen">ORIGEN:</label>
                         <input type="text" id="origen" required placeholder="desde donde viaja">
                     </div>
                     <div>
-                        <label for="Destino">A:</label>
+                        <label for="destino">DESTINO:</label>
                         <input type="text" id="destino" required placeholder="hacia donde viaja">
                     </div>
                     <div>
-                        <label for="Destino">Hotel:</label>
-                        <input type="text" id="destino" required placeholder="donde se hospeda">
+                        <label for="fechas">FECHAS:</label>
+                        <input type="text" id="fechas" required placeholder="cuando viaja">
                     </div>
                     <div>
-                        <label for="numero">Pasajeros</label>
-                        <select name="numero" id="num">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                        </select>
+                        <label for="hotel">Hotel:</label>
+                        <input type="text" id="hotel" required placeholder="donde se hospeda">
+                    </div>
+                    <div class="div-pasajeros">
+                            <label for="num">Pasajeros</label>
+                            <select name="pasajeros" id="num">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
                     </div>
                     <div>
-                        <label for="numero">Clases</label>
-                        <select name="numero" id="num">
+                        <label for="opt">Clases</label>
+                        <select name="clases" id="opt">
                             <option value="">Turista</option>
                             <option value="">Economica Plus</option>
                             <option value="">Business</option>
                             <option value="">Primera Clase</option>
                         </select>
+                    </div>
+                    <div class="div-boton">
+                        <input type="submit" value="Mostrar vuelos" class="boton-input"/>
                     </div>
                 </fieldset>
             </form>
@@ -107,51 +114,47 @@
             <div class="contenedorDest">
             <div class="destino">
                 <div class="card-img">
-                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/chile-santiago.html"><img src="./assets/img//chile/chile-santiago.jpg" alt="destino-chile">
-                        <div class="dest-info">
-                            <p class="dest-pais">CHILE</p>
-                            <h2 class="dest-ciudad">Santiago</h2>  
-                        </div>
-                    </a>
+                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/chile-santiago.html"><img src="./assets/img//chile/chile-santiago.jpg" alt="destino-chile"></a>
+                </div>
+                <div class="dest-info">
+                    <p class="dest-pais">CHILE</p>
+                    <h2 class="dest-ciudad">Santiago</h2>  
                 </div>
             </div>
             <div class="destino">
                 <div class="card-img">
-                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/jujuy.html"><img src="./assets/img/jujuy/jujuy.jpg" alt="destino-argentina1">
-                        <div class="dest-info">
-                            <p class="dest-pais">ARGENTINA</p>
-                            <h2 class="dest-ciudad">Jujuy</h2>  
-                        </div>
-                    </a>
+                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/jujuy.html"><img src="./assets/img/jujuy/jujuy.jpg" alt="destino-argentina-jujuy"></a>
+                </div>
+                <div class="dest-info">
+                    <p class="dest-pais">ARGENTINA</p>
+                    <h2 class="dest-ciudad">Jujuy</h2>  
                 </div>
             </div>
             <div class="destino">
                 <div class="card-img">
-                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/peru-lima.html"><img src="./assets/img//peru/peru-machu-picchu.jpg" alt="destino-perú">
-                        <div class="dest-info">
-                            <p class="dest-pais">PERÚ</p>
-                            <h2 class="dest-ciudad">Lima</h2>  
-                        </div>
-                    </a>
+                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/peru-lima.html"><img src="./assets/img//peru/peru-machu-picchu.jpg" alt="destino-perú-limna"></a>
+                </div>
+                <div class="dest-info">
+                    <p class="dest-pais">PERÚ</p>
+                    <h2 class="dest-ciudad">Lima</h2>  
                 </div>
             </div>
             <div class="destino">
                 <div class="card-img">
-                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/ushuaia.html"><img src="./assets/img/ushuaia/destino-ushuaia (4).jpg" alt="destino-argentina2">
-                        <div class="dest-info">
-                            <p class="dest-pais">ARGENTINA</p>
-                            <h2 class="dest-ciudad">Ushuaia</h2>  
-                        </div>
-                    </a>
+                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/ushuaia.html"><img src="./assets/img/ushuaia/destino-ushuaia (4).jpg" alt="destino-argentina-ushuaia"></a>
+                </div>
+                <div class="dest-info">
+                    <p class="dest-pais">ARGENTINA</p>
+                    <h2 class="dest-ciudad">Ushuaia</h2>  
                 </div>
             </div>
             <div class="destino">
                 <div class="card-img">
-                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/bariloche.html"><img src="./assets/img/bariloche/bariloche-2.jpg" alt="destino-argentina3"></a>
-                        <div class="dest-info">
-                            <p class="dest-pais">ARGENTINA</p>
-                            <h2 class="dest-ciudad">Bariloche</h2>  
-                        </div>
+                    <a id="destinosSugeridos" href="./pages/destinos-ofrecidos/bariloche.html"><img src="./assets/img/bariloche/bariloche-2.jpg" alt="destino-argentina-bariloche"></a>
+                </div>
+                <div class="dest-info">
+                    <p class="dest-pais">ARGENTINA</p>
+                    <h2 class="dest-ciudad">Bariloche</h2>  
                 </div>
             </div>
         </section>

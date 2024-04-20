@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+} 
+
+
+
+.bgFondo{
+    max-width: 100vw;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.bgCard{
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    justify-content: center;
+    z-index: -1;
+}
+
+.bgCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bgDestinos{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+main{
+    margin: 10px;
+}
+footer{    
+    position: relative;
+    margin-top: 50px;
+    width: 100vw;
+    height: 300px;
+
+
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+.footer-section {
+    padding: 0 10px;
+}
+
+
+/* Reset */
+

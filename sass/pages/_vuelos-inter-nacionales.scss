@@ -5,10 +5,17 @@
     top: 9.375rem;
     flex-direction: column;
     justify-content: center;
-    margin: 20px;
 }
 
+.container-vuelos .titulo-reseña{
+    background-color: rgb(39, 137, 230);
+}
+
+
 .titulo-vuelos-internacionales{
+    position: relative;
+    top: 9.375rem;
+    margin-bottom: 100px;
     text-align: center;
     color: white;
     font-size: 50px;
@@ -25,17 +32,48 @@
 }
 
 /**Vuelos Nacionales**/
+.titulo-vuelos-nacionales {
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .titulo-vuelos-nacionales h2{
-    margin-bottom: 300px;
     text-align: center;
     color: white;
-    font-size: 80px;
+    font-size: 110px;
     font-weight: 700;
 }
 
-.titulo-vuelos-nacionales h3{
-    margin-bottom: 100px;
+.subtitulo-vuelos-nacionales{
+    background: linear-gradient(rgba(0, 0, 0, 0.308),rgba(0, 0, 0, 0.329)),;
+    position: relative;
+    height: 200px;
+}
+.subtitulo-vuelos-nacionales h3 {
+
+    position: relative;
+    color: white;
+    font-size: 100px;
+    font-weight: 500;
+    letter-spacing: 6px;
     text-align: center;
+}
+
+.div-subt-img{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+
+}
+
+.div-subt-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .vuelos-nacionales{
@@ -47,6 +85,19 @@
     align-items: center;
 
 }
+
+.contenedor-reseña-nacional{
+    position: relative;
+}
+
+.reseña-vuelo-nacional{
+    display: flex;
+    justify-content: center;
+    gap: 6.25rem;
+    padding: 40px 40px;
+    align-items: center;
+}
+
 
 
 .boton-compra-vuelo{
@@ -65,6 +116,7 @@
     transform:  scale(1.1);
 
 }
+
 
 /**Card Vuelos**/
 .vuelo {
@@ -137,3 +189,9 @@
     background-color: rgb(239, 255, 165);
 }
 /**Card Vuelos**/
+
+    
+
+
+
+

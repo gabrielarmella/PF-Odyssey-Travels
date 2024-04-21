@@ -1,12 +1,10 @@
 
 .mainTravels{
     width: 100vw;}
-
-
-
 /*Iconos de redes sociales*/
 
 .contenedorIconos{
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -32,30 +30,25 @@
 /*Cuadro del formulario de vuelo*/
 
 .formulario-vuelos{
-    display: flex;
+    position: relative;
     justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 500px;
-    overflow: hidden;
+    height: 300px;
+    margin-top: 70px;
 }
 
 #form-vuelo{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #form-vuelo fieldset{
     background-color: rgba(255, 255, 255, 0.901);
     border-radius: 13px;
-    height: 120px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
 #form-vuelo fieldset div{
     display: flex;
     padding: 15px 15px;
@@ -242,9 +235,9 @@
 .contDestino{
     display: flex;
     background-color: #0000008c;
-    border-radius: 20px;
     padding: 10px 10px;
     flex-direction: column;
+    border-radius: 12px;
 }
 
 .paisDest {
@@ -280,9 +273,7 @@
 
 .container-boton-destinos{
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 20px;
     top: 100px;
 }
@@ -292,10 +283,8 @@
     padding: 10px 15px 10px 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color: rgba(255, 255, 255, 0.509);
     justify-items: center;
     border-radius: 10px;
-    box-shadow: 2px 2px 3px 4px rgba(26, 25, 25, 0.412);
 }
 
 
@@ -352,16 +341,90 @@
     display: inline-block;
     flex-direction: column;
     margin-top: 40px;
-    p{
-        font-family: "Poppins", sans-serif;
-        color: rgba(255, 255, 255, 0.932);
-        font-size: 35px;
-        font-weight: 800;
-        font-style: normal;
-        text-align: end;
-        letter-spacing: .0625rem;
-        
+    border-radius: 20px;
+    
+}
+.container-boton-destinos .compraDiv  p:nth-child(2){
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: .0625rem;
+    text-shadow:0 1px 0 #ccc, 
+            0 2px 0 #c9c9c9,
+            0 3px 0 #bbb,
+            0 4px 0 #b9b9b9,
+            0 5px 0 #aaa,
+            0 6px 1px rgba(0,0,0,.1),
+            0 0 5px rgba(0,0,0,.1),
+            0 1px 3px rgba(0,0,0,.3),
+            0 3px 5px rgba(0,0,0,.2),
+            0 5px 10px rgba(0,0,0,.25),
+            0 10px 10px rgba(0,0,0,.2),
+            0 20px 20px rgba(0,0,0,.15);
+}
+.container-boton-destinos .compraDiv  p:nth-child(3){
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: .0625rem;
+    text-shadow:0 1px 0 #ccc, 
+            0 2px 0 #c9c9c9,
+            0 3px 0 #bbb,
+            0 4px 0 #b9b9b9,
+            0 5px 0 #aaa,
+            0 6px 1px rgba(0,0,0,.1),
+            0 0 5px rgba(0,0,0,.1),
+            0 1px 3px rgba(0,0,0,.3),
+            0 3px 5px rgba(0,0,0,.2),
+            0 5px 10px rgba(0,0,0,.25),
+            0 10px 10px rgba(0,0,0,.2),
+            0 20px 20px rgba(0,0,0,.15);
+}
+
+.compraDiv div{
+    width: 120px;
+    height: 120px;
+}
+.compraDiv:hover{
+    div{
+        img{ 
+            animation: jello-vertical 0.9s both;
+            transition: 400ms;
+        }
+        @keyframes jello-vertical {
+            0% {
+                transform: scale3d(1, 1, 1);
+            }
+            30% {
+                    transform: scale3d(0.75, 1.25, 1)rotate(-3deg);
+            }
+            40% {
+                    transform: scale3d(1.25, 0.75, 1);
+            }
+            50% {
+                    transform: scale3d(0.85, 1.15, 1);
+            }
+            65% {
+                    transform: scale3d(1.05, 0.95, 1);
+            }
+            75% {
+                    transform: scale3d(0.95, 1.05, 1);
+            }
+            100% {
+                    transform: scale3d(1, 1, 1) rotate(-10deg);
+            }
+        }
     }
+}
+
+.compraDiv div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -378,6 +441,7 @@
         text-align: center;
         font-family: "Poppins", sans-serif;
         font-weight: 800;
+        font-size: 20px;
         font-style: normal;
         color: white;    
         font-weight: 500;
@@ -396,9 +460,8 @@
     transform: scale(1.1);
     transition-duration: 0.10s;
     transition: 0.25s ease-in-out;
-    filter: saturate(1.8);
+    filter: saturate(1.6)drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.356));
     border-radius: 13px;
-    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.356));
 }
 
 .destino .card-img img:hover{
@@ -408,7 +471,7 @@
 /*Pseudo clases */ 
 
 /*Pseudo Elemento*/
-span[data-descr] {
+span[data-descr]{
     position: relative;
     text-decoration: underline;
     color: rgba(255, 255, 255, 0);
@@ -416,7 +479,7 @@ span[data-descr] {
 }
 
 span[data-descr]:hover::after,
-span[data-descr]:focus::after {
+span[data-descr]:focus::after{
     content: attr(data-descr);
     position: absolute;
     left: 0;
@@ -430,5 +493,3 @@ span[data-descr]:focus::after {
     font-size: 14px;
     z-index: 1;
 }
-/*Pseudo Elemento*/
-

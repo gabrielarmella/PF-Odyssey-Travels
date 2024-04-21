@@ -24,7 +24,7 @@
 
 .containerOfertas{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-content: center;
     justify-content: center;
     justify-items: center
@@ -34,18 +34,32 @@
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    width: 400px;
+    width: 600px;
     background-color: map-get($colores, color-segundo);
     border-radius: 13px;
     align-items: center;
     margin: 30px;
 }
+
+.oferta:hover{
+    transform: scale(0.98);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.oferta h5{
+    color: map-get($colores, color-texto );
+    font-weight: 600;
+    font-size: 16px;
+}
+
 .oferta p{
     color: white;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 13px;
 }
+
 .card-img-oferta{
-    width: 400px;
+    width: 510px;
     height: 400px;
     overflow: hidden;
     border-top-left-radius: 13px;
@@ -78,14 +92,53 @@
 }
 
 .oferta-info{
+    position: absolute;
+    bottom: 0;
     display: inline-flex;
     flex-direction: column;
     justify-content: end;
+    gap: 7px;
     padding: 20px;
-    
+    background-color: rgba(0, 0, 0, 0.623);
+    width: 450px;
+    border-bottom-left-radius: 13px;
 }
 
-.botonCompra{
+.oferta:hover{
+    transform: scale(1) translate(-15px);
+    transition: 700ms;
+    .oferta-info{
+        transition: 600ms;
+        background-color: transparent;
+        height: 0;
+        div{
+            transition: 600ms;
+            display: none;
+        }
+        p{
+            transition: 600ms;
+            display: none;
+        }
+    }
+}
+.oferta-info div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+}
+.oferta-info div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedorBoton{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contenedorBoton .botonCompra{
     @extend .botonReserva;
     background-color: map-get($colores, color-texto);
 }
@@ -96,4 +149,12 @@
     border-color: #f6b93b !important;
     transition: all 0.4s ease 0s;
     border-radius: 12px;
+}
+
+.contenedorBoton .disclaimer-oferta{
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    color:  #ffffffa6;
 }

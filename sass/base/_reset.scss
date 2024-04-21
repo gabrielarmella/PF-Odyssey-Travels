@@ -18,9 +18,10 @@
 }
 
 .bgCard{
-    width: 100vw;
-    height: 70vh;
     position: absolute;
+    width: 100vw;
+    height: 70%;
+    background: linear-gradient(rgba(0, 0, 0, 0.856));
     justify-content: center;
     z-index: -1;
 }
@@ -31,16 +32,7 @@
     object-fit: cover;
 }
 
-.bgDestinos{
-    background-color: #ffffff;
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-}
 
-main{
-    margin: 10px;
-}
 footer{    
     position: relative;
     margin-top: 50px;

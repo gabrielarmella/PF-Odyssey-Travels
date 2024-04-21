@@ -1,0 +1,103 @@
+@media screen and (max-width:321px){
+    .navBar {
+        align-items: stretch;
+        justify-content: space-evenly;
+    }
+    
+    .contenedorDest{
+        grid-template-columns: 1fr;
+    }        
+    /**HOTEL**/
+    .divHotel{
+        width: 100%;
+        height: 350px;
+        .card-hotel{
+            .textoDiv{ 
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .tituloHotel{
+                    font-size: 60px;
+                    font-weight: 700;
+                }
+                .parrafoHotel{
+                    font-size: 13px;
+                    letter-spacing: 3px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .cliente p{
+        padding: 8px;
+    }
+    .rating {
+        margin: 5px;
+    }
+    .reseña{
+        gap: 6px;
+    }
+    .div-img-cliente{
+        padding: 30px 30px;
+    }
+    .container-hoteles{
+        grid-template-columns: 1fr ;
+        top: 10px;
+    }
+    /**Ofertas**/
+    
+    .container-oferta{
+            top: 30px;
+        }
+    .titulo-oferta h2{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    .titulo-oferta h3{
+        font-size: 23px;
+    }
+    .seccionOfertas{
+        margin-top: 40px;
+    }
+    .oferta{
+        margin: 25px;
+        width: 280px;
+        
+    }
+    .oferta h5{
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .oferta p{
+        font-size: 11px;
+        font-weight: 300;
+    }
+    .oferta-info {
+        width: 170px;
+        height: 135px;
+        padding: 8px;
+        overflow: hidden;
+    }
+    .contenedorBoton {
+        width: 110px;
+    }
+    .contenedorBoton .botonCompra{
+        width: 80px;
+        height: 43px;
+    }
+    .disclaimer-oferta{
+        padding: 10px;
+        text-align: center;
+    }
+    /**Vuelos Nacionales**/
+    .titulo-vuelos-nacionales{
+        height: 300px;
+    }
+    .titulo-vuelos-nacionales h2{
+        font-size: 25px;
+    }
+    .subtitulo-vuelos-nacionales h3{
+        padding-top: 50px;
+        font-size: 40px;
+    }
+}

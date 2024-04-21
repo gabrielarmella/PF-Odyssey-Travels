@@ -2,13 +2,42 @@
 
 /*Seccion Hoteles*/
 .divHotel{
+    position: relative;
     width: 100vw;
     height: 25vw;
     display: flex;
     justify-content: center;
     z-index: -1;
 }
+.card-hotel{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
 
+.textoDiv{
+    position: absolute;
+    text-align: center;
+}
+
+.tituloHotel{
+    font-size: 350px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.855);
+    letter-spacing: 5px;
+}
+
+.parrafoHotel{
+    position: relative;
+    top:100px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.855);
+    font-size: 35px;
+    letter-spacing: 15px;
+}
 /*Mini Seccion Reseñas*/
 .reseñas-hotel{
     position: relative;
@@ -21,10 +50,13 @@
     padding: 40px 40px;
     align-items: center;
 }
+
 .titulo-reseña{
+    position: relative;
     text-align: center;
     color: #f2f2f2;
     font-size: 30px;
+    background-color: rgb(52, 189, 189);
 }
 .cliente{
     display: flex;
@@ -68,40 +100,13 @@
     justify-content: center;
     justify-items: center
 }
-.card-hotel{
-    position: relative;
-    width: 100%;
-    height: 500px;
-}
+
 
 .hotel-img{ 
     width: 500px;
     height: 400px;
 }
-.textoDiv{
-    position: absolute;
-    top: 10%;
-    left: 25%;
-}
 
-.tituloHotel{
-    font-size: 350px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.855);
-    letter-spacing: 5px;
-}
-
-.parrafoHotel{
-    position: relative;
-    top:100px;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: rgba(255, 255, 255, 0.855);
-    font-size: 35px;
-    letter-spacing: 15px;
-}
 
 .hotel {
     @extend .vuelo;

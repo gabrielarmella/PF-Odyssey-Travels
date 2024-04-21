@@ -1,0 +1,146 @@
+@media screen and (max-width:378px){
+    .navBar {
+        align-items: stretch;
+        justify-content: space-evenly;
+    }
+    .menue-izquierda{
+        float: left;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    .menu-derecha{
+        flex-direction: column;
+        .menu-cen{
+            flex-direction: column;
+            gap: 0px;
+            li{
+                font-size: 12px;
+            }
+        }
+        .navBar .menu-derecha a{
+            float: none;
+            font-size: 8px;
+            padding: 4px 6px;
+        }
+        
+    }
+    .contenedorDest{
+        grid-template-columns: 1fr;
+    }
+    /**HOTEL**/
+    .divHotel{
+        width: 100%;
+        height: 350px;
+
+        .card-hotel{
+            .textoDiv{ 
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .tituloHotel{
+                    font-size: 60px;
+                    font-weight: 700;
+                }
+                .parrafoHotel{
+                    font-size: 13px;
+                    letter-spacing: 3px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .cliente p{
+        padding: 8px;
+    }
+    .rating {
+        margin: 5px;
+    }
+    .reseña{
+        gap: 6px;
+    }
+    .div-img-cliente{
+        padding: 25px 25px;
+    }
+    .container-hoteles{
+        grid-template-columns: 1fr ;
+        top: 10px;
+    }
+
+    .hotel{
+        margin-bottom: 0px;
+        width: 310px;
+        height: 500px;
+    }
+    /**Ofertas**/
+    
+    .container-oferta{
+            top: 50px;
+        }
+    .titulo-oferta h2{
+        font-size: 70px;
+        font-weight: 600;
+    }
+    .titulo-oferta h3{
+        font-size: 30px;
+    }
+    .seccionOfertas{
+        margin-top: 40px;
+    }
+    .oferta{
+        margin: 25px;
+        width: 319px;
+    }
+    .oferta h5{
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .oferta p{
+        font-size: 11px;
+        font-weight: 300;
+    }
+    .oferta-info {
+        width: 210px;
+        height: 135px;
+        padding: 8px;
+        overflow: hidden;
+    }
+    .contenedorBoton {
+        width: 110px;
+    }
+    .contenedorBoton .botonCompra{
+        width: 80px;
+        height: 43px;
+    }
+    .disclaimer-oferta{
+        padding: 10px;
+        text-align: center;
+    }
+    /**Vuelos Internacionales**/
+    .titulo-vuelos-internacionales{
+        font-size: 17px;
+        top: 40px;
+        margin-bottom: 0px;
+    }
+    .container-vuelos{
+        top: 20px;
+    }
+    .vuelos-internacionales{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+    .vuelo-img{
+        width: 315px;
+        height: 360px;
+    }
+    .vuelo-info{
+        width: 315px;
+    }
+    .vuelo-info .boton-compra-vuelo{    
+        margin: 10px;
+    }
+}
+

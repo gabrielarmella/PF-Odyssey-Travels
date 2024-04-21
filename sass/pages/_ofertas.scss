@@ -52,11 +52,24 @@
     font-size: 16px;
 }
 
-.oferta p{
-    color: white;
-    font-weight: 400;
-    font-size: 13px;
+
+.img-icon-vector{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
+
+.contenedorBoton .precio-oferta{
+    font-weight: 600;
+    color: white;
+    font-size: 30px;
+}
+
 
 .card-img-oferta{
     width: 510px;
@@ -104,6 +117,14 @@
     border-bottom-left-radius: 13px;
 }
 
+.oferta-info div:nth-child(2){
+    color: white;
+}
+.oferta-texto-descr{
+    color: white;
+}
+
+
 .oferta:hover{
     transform: scale(1) translate(-15px);
     transition: 700ms;
@@ -136,6 +157,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
 }
 
 .contenedorBoton .botonCompra{

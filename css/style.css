@@ -1072,10 +1072,21 @@ span[data-descr]:focus::after {
   font-size: 16px;
 }
 
-.oferta p {
+.img-icon-vector {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+.img-icon-vector img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contenedorBoton .precio-oferta {
+  font-weight: 600;
   color: white;
-  font-weight: 400;
-  font-size: 13px;
+  font-size: 30px;
 }
 
 .card-img-oferta {
@@ -1123,6 +1134,14 @@ span[data-descr]:focus::after {
   background-color: rgba(0, 0, 0, 0.623);
   width: 450px;
   border-bottom-left-radius: 13px;
+}
+
+.oferta-info div:nth-child(2) {
+  color: white;
+}
+
+.oferta-texto-descr {
+  color: white;
 }
 
 .oferta:hover {

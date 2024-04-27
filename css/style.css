@@ -1515,7 +1515,6 @@ span[data-descr]:focus::after {
 }
 
 /**Card Vuelos**/
-/**Card Vacaciones**/
 .vacacionesContainer {
   display: flex;
   flex-wrap: wrap;

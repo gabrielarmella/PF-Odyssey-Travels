@@ -18,7 +18,6 @@
   position: absolute;
   width: 100vw;
   height: 70%;
-  background: linear-gradient(rgba(0, 0, 0, 0.856));
   justify-content: center;
   z-index: -1;
 }
@@ -29,54 +28,81 @@
   object-fit: cover;
 }
 
-#footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-content: center;
-  z-index: 1;
-  padding: 20px;
-}
-
 .footer-section {
   padding: 0 10px;
 }
 
 .footer {
-  min-width: 320px;
-  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   font-size: 13px;
   color: #888;
   padding-top: 30px;
+  margin: 10px;
 }
 
 .footer-arrepentimiento-info {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  padding: 20px;
+  border-radius: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.623);
 }
 
 .footer-arrepentimiento-head {
   display: flex;
-  margin-bottom: 8px;
+  align-items: center;
+  gap: 15px;
+  margin-left: 3%;
+}
+.footer-arrepentimiento-head div {
+  width: 30px;
+  height: 30px;
+}
+.footer-arrepentimiento-head div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer-arrepentimiento-head p {
+  font-size: 15px;
 }
 
-.container-footer {
-  display: inline-flex;
+.footer-arrepentimiento-body {
+  margin: 20px;
+  padding: 0px 10px 20px;
+  font-size: 15px;
+}
+
+.footer-arrepentimiento-body p:nth-child(1) {
+  padding: 5px;
+}
+
+.footer-arrepentimiento-body .btn-arrepentimiento {
+  position: relative;
+  color: #fff;
+  background-color: #5966B1;
+  padding: 10px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 14px;
+  top: 20px;
 }
 
 .container-footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .logo-foot {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 320px;
-  width: 100%;
+  padding: 20px;
 }
 
 .logo-izq {
@@ -91,12 +117,16 @@
   object-fit: cover;
 }
 .logo-izq a {
-  color: #002727;
+  color: rgba(0, 39, 39, 0.8);
   text-decoration: none;
   font-size: 20px;
 }
 .logo-izq a p {
   display: inline-block;
+}
+
+.logo-izq:hover {
+  transform: scale(0.95);
 }
 
 .footerIconos {
@@ -123,9 +153,27 @@
   flex-direction: row;
 }
 
+.footerIconos a:hover {
+  transform: scale(0.95);
+}
+
 .menu-footer {
   display: flex;
+  gap: 40px;
   flex-direction: row;
+}
+
+.footer-list .footer-list-item {
+  list-style: none;
+  margin: 5px;
+}
+
+.footer-list-item a {
+  text-decoration: none;
+  color: #888;
+}
+.footer-list-item a:hover {
+  color: #c5c4c4;
 }
 
 /* Reset */
@@ -164,7 +212,7 @@
   font-weight: 400;
 }
 .menu-izquierda:hover {
-  transform: scale(1.3);
+  transform: scale(0.95);
   transition-duration: 0.4s;
 }
 
@@ -321,6 +369,7 @@
   flex-direction: row;
   position: relative;
   border-radius: 15px;
+  overflow: hidden;
   margin-top: 80px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -408,6 +457,8 @@
   height: 800px;
   top: 80px;
   left: 500px;
+  box-shadow: -3px 0px 8px -2px rgb(0, 0, 0);
+  overflow: hidden;
 }
 
 .video-contacto video {
@@ -624,7 +675,9 @@
 
 /**Boton Reserva*/
 .mainTravels {
+  position: relative;
   width: 100vw;
+  margin-bottom: 210px;
 }
 
 /*Iconos de redes sociales*/
@@ -687,24 +740,28 @@
 }
 
 #origen {
+  border: 1px solid rgba(0, 0, 0, 0.829);
   border-radius: 8px;
   width: auto;
   height: 26px;
 }
 
 #destino {
+  border: 1px solid rgba(0, 0, 0, 0.829);
   border-radius: 8px;
   width: auto;
   height: 26px;
 }
 
 #fechas {
+  border: 1px solid rgba(0, 0, 0, 0.829);
   border-radius: 8px;
   width: auto;
   height: 26px;
 }
 
 #hotel {
+  border: 1px solid rgba(0, 0, 0, 0.829);
   border-radius: 8px;
   width: auto;
   height: 26px;
@@ -1458,6 +1515,197 @@ span[data-descr]:focus::after {
 }
 
 /**Card Vuelos**/
+/**Card Vacaciones**/
+.vacacionesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+}
+
+.vacac-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 400px;
+  border-radius: 13px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-vacac-img {
+  width: 400px;
+  height: 300px;
+}
+
+.card-vacac-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vacac-container .card-vacac-img:hover {
+  transform: scale(1.3) translateY(-30px) translateX(-25px);
+  transition: 500ms;
+}
+
+/**Texto paquete**/
+/*Rebaja*/
+.text-paquete {
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  top: 52%;
+  left: 4%;
+}
+
+.text-paquete-rebaja {
+  background-color: rgba(31, 109, 255, 0.979);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/*Informacion*/
+.paquete-info {
+  position: relative;
+  width: 300px;
+  margin: 10px;
+}
+
+.paquete-info div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.salida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.salida div {
+  width: 30px;
+  height: 30px;
+}
+.salida div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.llegada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.llegada div {
+  width: 30px;
+  height: 30px;
+}
+.llegada div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**Rating**/
+.rating-paquete {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  top: 58%;
+  right: 3%;
+}
+.rating-paquete div {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.rating-paquete div span {
+  font-size: 15px;
+}
+
+/**Indicador de cuantas personas vieron este paquete**/
+.visto-paquete {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  top: 62%;
+  right: 1%;
+  width: 80px;
+  height: 20px;
+}
+.visto-paquete p {
+  font-size: 11px;
+}
+
+.visto-paquete div {
+  width: 18px;
+  height: 18px;
+}
+
+.visto-paquete div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**Iconos**/
+.icono-paquete {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 70%;
+}
+
+.icono-paquete-img {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.icono-paquete-img div:nth-child(1) {
+  width: 20px;
+  height: 20px;
+}
+
+.icono-paquete-img div:nth-child(2) {
+  width: 25px;
+  height: 25px;
+}
+
+.icono-paquete-img div:nth-child(3) {
+  width: 30px;
+  height: 30px;
+}
+
+.icono-paquete-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.precio-oferta-paquete {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.disclaimer-paquete {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+}
+
 @media screen and (max-width: 2200px) {
   .contenedorDest {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1592,6 +1840,9 @@ span[data-descr]:focus::after {
   .formulario-vuelos {
     position: relative;
     justify-content: center;
+  }
+  .menu-izquierda:hover {
+    transform: scale(0.96);
   }
   /**HOTEL**/
   .divHotel {

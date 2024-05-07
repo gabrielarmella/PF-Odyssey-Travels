@@ -1,0 +1,93 @@
+@media screen and (max-width:1440px){
+    .contenedorDest{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .formulario-vuelos{
+        position: relative;
+        justify-content: center;
+        margin: 40px;
+    }
+    #form-vuelo{
+        display: flex;
+        flex-wrap: wrap;
+        fieldset{
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    /**HOTEL**/
+    .divHotel{
+        width: 100%;
+        height: 500px;
+        .card-hotel{
+            .textoDiv{
+                .tituloHotel{
+                    font-size: 270px;
+                }
+                .parrafoHotel{
+                    font-size: 25px;
+                    letter-spacing: 10px;
+                    top: 60px;
+                }
+            }
+        }
+    }
+    .reseña{
+        padding: 20px 20px;
+    }
+    .cliente{
+        width: 350px;
+        padding: 20px 30px;
+    }
+    .container-hoteles{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    /**Ofertas**/
+    .oferta{
+        margin: 20px;
+        width: 570px;
+    }
+    .oferta-info {
+        width: 450px;
+    }
+    
+    /**Vuelos Internacionales**/
+    .vuelos-internacionales{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+    .vuelo-info .boton-compra-vuelo{    
+        margin: 10px;
+        margin-top: 15px;
+    }
+    /**Vuelos Nacionales**/
+    .container-vuelos .titulo-reseña{
+        font-size: 40px;
+    }
+    .vuelos-nacionales{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .titulo-vuelos-nacionales {
+        height: 500px;
+    }
+    .subtitulo-vuelos-nacionales{
+        height: 200px;
+    }   
+    .titulo-vuelos-nacionales h2{
+    font-size: 110px;
+    font-weight: 700;
+    }
+
+
+}
+
+

@@ -1,12 +1,25 @@
 @media screen and (max-width:1890px){
     .contenedorDest{
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
     }
     .formulario-vuelos{
         position: relative;
         justify-content: center;
+        margin: 40px;
     }
-
+    #form-vuelo{
+        display: flex;
+        flex-wrap: wrap;
+        fieldset{
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
 
     /**HOTEL**/
     .divHotel{
@@ -15,6 +28,9 @@
         .card-hotel{
             .textoDiv{
                 .tituloHotel{
+                    font-size: 270px;
+                }
+                .tituloHotel1{
                     font-size: 270px;
                 }
                 .parrafoHotel{
@@ -41,7 +57,7 @@
         width: 570px;
     }
     .oferta-info {
-        width: 420px;
+        width: 450px;
     }
     
     /**Vuelos Internacionales**/

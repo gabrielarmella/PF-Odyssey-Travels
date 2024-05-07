@@ -21,6 +21,10 @@
             }
         }
     }
+    .hotel-img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
     .reseña{
         padding: 35px 35px;
     }
@@ -37,7 +41,11 @@
         width: 650px;
     }
     .oferta-info {
-        width: 500px;
+        width: 510px;
+    }
+    .oferta-info img {
+        width: 35px;
+        height: 35px;
     }
     /**Vuelos Internacionales**/
     .container-vuelos .titulo-reseña{
@@ -57,5 +65,8 @@
     .titulo-vuelos-nacionales h2{
         font-size: 110px;
         font-weight: 700;
+    }
+    .botonReserva{
+        margin: 10px;
     }
 }

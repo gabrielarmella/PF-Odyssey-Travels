@@ -11,9 +11,11 @@
     align-content: center;
 }
 
+
+
 .texto-contacto h1{
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 800;
     color: rgba(37, 37, 37, 0.815);
 }
 .texto-contacto h4{
@@ -54,6 +56,10 @@
 #contacto textarea{
     border: 1px solid rgba(0, 0, 0, 0.692);
     border-radius: 10px;
+}
+
+.texto-contacto{
+    align-items: center;
 }
 
 
@@ -129,5 +135,49 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: 1;
+}
 
+.contenedorContacto h5{ 
+    color: rgba(0, 0, 0, 0.753);
+    position: absolute;
+    top: 3%;
+    left: 12%;
+}
+/**Traslados**/
+
+.texto-traslados{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.texto-traslados h1{
+    color: rgba(0, 0, 0, 0.63);
+}
+.mainContacto .seccionHoteles .container-hoteles{
+    top: 0;
+    margin-top: 10px;
+    gap: 20px;
+    .hotel{
+        background-color: #ffffffde;
+        width: 300px;
+        height: 500px;
+        border: 1px solid rgba(0, 0, 0, 0.219);
+    }
+    .hotel-img {
+        width: 300px;
+        border: 1px solid rgba(0, 0, 0, 0.158);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .divHotelInfo p{
+        color: rgba(0, 0, 0, 0.521);
+    }
 }

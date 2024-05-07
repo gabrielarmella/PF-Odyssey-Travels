@@ -12,7 +12,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 400px;
+    width: 350px;
+    height: 550px;
     border-radius: 13px;
     overflow: hidden;
     background-color: #fff;
@@ -20,7 +21,7 @@
 
 .card-vacac-img{
     width: 400px;
-    height: 300px;
+    height: 280px;
 }
 
 .card-vacac-img img{
@@ -29,10 +30,45 @@
     object-fit: cover;
 }
 
-.vacac-container .card-vacac-img:hover{
-    transform: scale(1.3) translateY(-30px) translateX(-25px); 
-    transition: 500ms;
+/**Subtitulo Vacaciones**/
+.subtitulo-vacaciones{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
 }
+
+.subtitulo-vacaciones h3 {  
+    position: relative;
+    width: 900px;
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.329));
+    color: white;
+    font-size: 100px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.div-subt-img {
+    border-radius: 15px;
+    overflow: hidden;
+    position: absolute;
+    width: 900px;
+    z-index: -1;
+}
+
+.div-subt-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
 
 /**Texto paquete**/
     /*Rebaja*/
@@ -40,8 +76,8 @@
     position: absolute;
     width: 150px;
     height: 20px;
-    top: 52%;
-    left: 4%;
+    top: 50%;
+    left: 5%;
 }
 
 .text-paquete-rebaja{
@@ -57,14 +93,17 @@
     /*Informacion*/
 .paquete-info{
     position: relative;
+    display: flex;
+    justify-content: flex-start;
     width: 300px;
-    margin: 10px;
+    height: 100px;
 }
 
-.paquete-info div{
+.paquete-div{
+    position: absolute;
     display: flex;
-    flex-direction: row;
-    gap: 5px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 
@@ -73,6 +112,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    justify-content: flex-start;
     div{
         width: 30px;
         height: 30px;
@@ -88,6 +128,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
     div{
         width: 30px;
@@ -107,7 +148,7 @@
     display: flex;
     flex-direction: row;
     float: left;
-    top: 58%;
+    top: 60%;
     right: 3%;
     div{
         display: flex;
@@ -127,7 +168,7 @@
     justify-content: center;
     align-items: center;
     float: left;
-    top: 62%;
+    top: 64%;
     right: 1%;
     width: 80px;
     height: 20px;
@@ -153,7 +194,8 @@
     position: absolute;
     width: 80px;
     height: 30px;
-    top: 70%;
+    top: 73%;
+    left: 45%;
 }
 
 .icono-paquete-img{
@@ -184,9 +226,14 @@
     object-fit: cover;
 }
 
+.contenedor-Boton-paquete{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
 
 .precio-oferta-paquete{
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 800;
     color: rgba(0, 0, 0, 0.87);
 }
@@ -194,5 +241,162 @@
 .disclaimer-paquete{
     color: rgba(0, 0, 0, 0.87);
     font-size: 13px;
+}
+
+.compraPaquete{
+    width: 100%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins";
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: white;
+    background: rgb(255,172,47);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(360deg, rgba(255,172,47,1) 0%, rgba(240,164,58,1) 100%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(360deg, rgba(255,172,47,1) 0%, rgba(240,164,58,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.compraPaquete:hover{
+    transition: 500ms;
+    transform: scale(1.1);
+}
+
+.div-promo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.flex-promo{
+    width:  700px;
+    border-radius: 20px;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-promo h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #070707;
+}
+.flex-promo p {
+    text-align: center;
+    font-size: 15px;
+    color: #000000c9;
+    font-weight: 400;
+}
+
+.promo-seguro{
+    display: flex;
+    padding: 10px;
+    gap: 100px;
+}
+.metodo-pago_icono{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.tarjeta-promocion{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    padding: 20px;
+}
+
+.promo-img{
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.icono-boleto{
+    position: absolute;
+    top: 20%;
+    right: 35%;
+}
+
+.icono-tarjeta{
+    position: absolute;
+    top: 73%;
+    left: 25%;
+}
+
+.flex-promo:hover .icono-boleto{
+    animation: jello-vertical 0.9s both;
+    transition: 400ms;
+    transform: scale(1.1);
+}
+@keyframes jello-vertical {
+    0% {
+    transform: scale3d(1, 1, 1);
+    }
+    30% {
+    transform: scale3d(0.75, 1.25, 1) rotate(-3deg);
+    }
+    40% {
+    transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+    transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+    transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+    transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+    transform: scale3d(1, 1, 1) rotate(-10deg);
+    }
+}
+
+
+.flex-promo:hover  .icono-tarjeta{
+	-webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+	animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    transform: scale(1.1);
+}
+
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.seccionOfertas1{
+    margin-top: 50px;
+}
+.subtitulo-vacaciones h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

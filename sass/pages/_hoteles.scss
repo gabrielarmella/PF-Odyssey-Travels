@@ -29,7 +29,26 @@
     letter-spacing: 5px;
 }
 
+.tituloHotel1{
+    font-size: 350px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.855);
+    letter-spacing: 5px;
+}
+
 .parrafoHotel{
+    position: relative;
+    top:100px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.855);
+    font-size: 35px;
+    letter-spacing: 15px;
+}
+
+.parrafoHotel1{
     position: relative;
     top:100px;
     font-weight: 600;

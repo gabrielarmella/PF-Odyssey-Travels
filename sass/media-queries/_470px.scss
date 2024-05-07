@@ -28,7 +28,8 @@
         
     }
     .contenedorDest{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
     }
     /**HOTEL**/
     .divHotel{

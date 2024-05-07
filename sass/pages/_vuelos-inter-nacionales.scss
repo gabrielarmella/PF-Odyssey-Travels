@@ -2,7 +2,7 @@
 /**Vuelos Internacionales**/
 .container-vuelos{
     position: relative;
-    top: 9.375rem;
+    margin-top: 7%;
     flex-direction: column;
     justify-content: center;
 }
@@ -14,11 +14,16 @@
 
 .titulo-vuelos-internacionales{
     position: relative;
-    top: 9.375rem;
-    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.titulo-vuelos-internacionales h2{
+    font-size: 100px;
     text-align: center;
     color: white;
-    font-size: 50px;
 }
 
 .vuelos-internacionales{
@@ -46,23 +51,34 @@
     font-weight: 700;
 }
 .subtitulo-vuelos-nacionales{
-    background: linear-gradient(rgba(0, 0, 0, 0.308),rgba(0, 0, 0, 0.329)),;
     position: relative;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
-.subtitulo-vuelos-nacionales h3 {
-
+.subtitulo-vuelos-nacionales h3 {  
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.329));
     color: white;
     font-size: 100px;
     font-weight: 500;
     letter-spacing: 6px;
     text-align: center;
+    border-radius: 20px;
 }
 
 .div-subt-img{
+    border-radius: 20px;
     position: absolute;
+    overflow: hidden;
     width: 100%;
     height: 200px;
     z-index: -1;
@@ -87,6 +103,9 @@
 }
 
 .contenedor-reseña-nacional{
+    position: relative;
+}
+.contenedor-reseña-internacional{
     position: relative;
 }
 
@@ -181,12 +200,10 @@
 
 .vuelo-info .vuelo-origen p:nth-child(3){
     font-weight: 500;
-    background-color: rgb(239, 255, 165);
 }
 
 .vuelo-info .vuelo-destino p:nth-child(3){
     font-weight: 500;
-    background-color: rgb(239, 255, 165);
 }
 /**Card Vuelos**/
 

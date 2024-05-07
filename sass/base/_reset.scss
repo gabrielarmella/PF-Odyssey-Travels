@@ -31,8 +31,58 @@
     object-fit: cover;
 }
 
+.bgCardVuelos{
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    background: rgb(0,0,0);
+    background-image:  radial-gradient(circle, rgba(0,0,0,0.25253851540616246) 20%, rgba(33,33,33,0.25253851540616246) 80%),
+    url(../assets/img/fondo-vuelos.jpg);
+    background-size: cover;
+    background-position: top;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bgCardInternacional{
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    background: rgb(0,0,0);
+    background-image:  radial-gradient(circle, rgba(0,0,0,0.25253851540616246) 20%, rgba(33,33,33,0.25253851540616246) 80%),
+    url(../assets/img/fondo-marruecos.jpg);
+    background-size: cover;
+    background-position: top;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bgCardVacaciones{
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    background: rgb(0,0,0);
+    background-image:  radial-gradient(circle, rgba(0,0,0,0.25253851540616246) 20%, rgba(33,33,33,0.25253851540616246) 80%),
+    url(../assets/img/vacaciones-italia.jpg);
+    background-size: cover;
+    background-position: top;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+.bgCardVacaciones img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .footer-section {
     padding: 0 10px;
+    margin: 0%;
 }
 
 .footer{
@@ -45,7 +95,7 @@
     font-size: 13px;
     color: #888;
     padding-top: 30px;
-    margin: 10px;
+    margin-top: 300px;
 }
 
 .footer-arrepentimiento-info{

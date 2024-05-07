@@ -3,10 +3,67 @@
         align-items: stretch;
         justify-content: space-evenly;
     }
+    .contenedorIconos{
+        width: auto;
+    }
     
     .contenedorDest{
-        grid-template-columns: 1fr;
-    }        
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0%;
+    }  
+    .container-boton-destinos{
+        margin-top: 400px;
+        gap: 0%;
+    }
+    .compraDiv {
+        width: 60px;
+        height: auto;
+    }
+    .destino{
+        width: 220px;
+        height: 400px;
+    }
+    .destino .card-img {
+        width: 220px;
+        height: 350px;
+    }
+    .dest-info{
+        width: 220px;
+        height: 90px;
+    }
+    .compraDiv div{
+        width: 60px;
+        height: 60px;
+    }
+    .container-boton-destinos .compraDiv p:nth-child(2) {
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: .1875rem;
+    }
+    .container-boton-destinos .compraDiv p:nth-child(3){
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: .1875rem;
+    }
+    .divInfo{
+        margin-top: 100px;
+    }
+    .paisDest{
+        margin: 0%;
+        font-size: 13px;
+    }
+    .ciudadDest{
+        font-size: 35px;
+    }
+    .contDestino p{
+        width: 150px;
+        height: auto;
+    }
+    .desCiudad{
+        font-size: 13px;
+    }
     /**HOTEL**/
     .divHotel{
         width: 100%;
@@ -25,8 +82,26 @@
                     letter-spacing: 3px;
                     font-weight: 600;
                 }
+                .tituloHotel1{
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+                .parrafoHotel1{
+                    top:30px;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                }
             }
         }
+    }
+    .divHotelInfo p{
+        width: 280px;
+        font-weight: 300;
+    }
+    .divHotelInfo .disclaimer-info{
+        width: 250px;
+        font-size: 12px;
     }
     .cliente p{
         padding: 8px;
@@ -62,7 +137,6 @@
     .oferta{
         margin: 25px;
         width: 280px;
-        
     }
     .oferta h5{
         font-weight: 500;
@@ -73,21 +147,43 @@
         font-weight: 300;
     }
     .oferta-info {
-        width: 170px;
+        width: 190px;
         height: 135px;
         padding: 8px;
-        overflow: hidden;
+        gap: 1px;
+        img{
+            width: 25px;
+            height: 25px;
+        }
     }
     .contenedorBoton {
-        width: 110px;
+        width: 90px;
+    }
+    .container-boton-destinos .botonCompra{
+        width: 70px;
+        height: 40px;
+    }
+    .container-boton-destinos .botonCompra p{
+        font-size: 11px;
     }
     .contenedorBoton .botonCompra{
-        width: 80px;
-        height: 43px;
+        width: 73px;
+        height: 35px;
+        padding: 1px;
     }
     .disclaimer-oferta{
         padding: 10px;
         text-align: center;
+    }
+    .contenedorBoton .precio-oferta{
+        font-size: 16px;
+    }
+    .text-oferta{
+        font-size: 11px;
+    }
+    .text-rebaja {
+        margin: 7px;
+        font-size: 10px;
     }
     /**Vuelos Nacionales**/
     .titulo-vuelos-nacionales{
@@ -100,4 +196,171 @@
         padding-top: 50px;
         font-size: 40px;
     }
+    .logo-foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: none;
+    }
+    .footer-arrepentimiento-info{
+        padding: none;
+    }
+    .footer-arrepentimiento-body{
+        font-size: 10px;
+    }
+    .menu-footer{
+        flex-direction: column;
+    }
+    /** Promo/seguros/tarjetas **/
+.div-promo{
+    gap: 4px;
 }
+.flex-promo {
+    width: 150px;
+}
+.promo-seguro{
+    gap: 20px;
+    img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+.icono-boleto img{
+    width: 60px;
+    height: 60px;
+}
+.icono-tarjeta img{
+    width: 60px;
+    height: 60px;
+}
+
+.promo-img{
+    width: 150px;
+    height: auto;
+}
+.promo-img div{
+    position: absolute;
+    width: 150px;
+    top: 30%;
+    right: 2%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.promo-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flex-promo h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.flex-promo p{
+    font-size: 12px;
+}
+
+.metodo-pago_icono{
+    width: 100px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.tarjeta-promocion img{
+    width: 40px;
+    height: 40px;
+}
+
+.icono-boleto{
+    top: 25%;
+    right: 20%;
+    z-index: 20;
+}
+
+.icono-tarjeta{
+    top: 95%;
+    left: 5%;
+}
+
+.div-subt-img {
+    height: 100px;
+    width: 250px;
+}
+
+.subtitulo-vacaciones h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+/**form contacto**/
+#contacto {
+    width: 125px;
+    padding: 5px;
+}
+
+.contenedorContacto #contacto{
+    width: auto;
+}
+.contenedorContacto #contacto fieldset{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorContacto #contacto input[type="text"],
+#contacto input[type="email"],
+#contacto input[type="tel"],
+#contacto textarea {
+    width: 120px;
+    padding: 4px;
+    background-color: white;
+    margin: 10px;
+    align-items: center;
+}
+
+.texto-contacto{
+    align-items: center;
+}
+
+.texto-contacto h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.texto-contacto h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.contenedorContacto{
+    gap: 2px;
+    margin: 15px;
+    margin-top: 100px;
+}
+.video-contacto{
+    width: auto;
+    height: auto;
+}
+#contacto button[type=submit]{
+    margin: 20px;
+}
+.copyright{
+    font-size: 10px;
+}
+}
+
+

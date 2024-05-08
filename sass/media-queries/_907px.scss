@@ -13,10 +13,116 @@
         flex-wrap: wrap;
     }
     .formulario-vuelos{
+        margin-top: 80px;
         position: relative;
         justify-content: center;
     }
-
+    /**Pagina Inicio/Destinos-chile-jujuy-peru-bariloche**/
+    .contenedorDest{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0%;
+    }  
+    .container-boton-destinos{
+        margin-top: 150px;
+        gap: 0%;
+    }
+    .container-boton-destinos1{
+        margin-top: 100px;
+        gap: 0%;
+    }
+    .compraDiv {
+        width: 100px;
+        height: auto;
+        margin-left: 50px;
+    }
+    .destino{
+        width: 300px;
+        height: 400px;
+    }
+    .destino .card-img {
+        width: 300px;
+        height: 350px;
+    }
+    .dest-info{
+        width: 300px;
+        height: 90px;
+    }
+    .compraDiv div{
+        width: 140px;
+        height: 140px;
+    }
+    .container-boton-destinos .compraDiv p:nth-child(2) {
+        font-size: 28px;
+    }
+    .container-boton-destinos .compraDiv p:nth-child(3){
+        font-size: 28px;
+    }
+    .container-boton-destinos1 .compraDiv p:nth-child(2) {
+        font-size: 28px;
+    }
+    .container-boton-destinos1 .compraDiv p:nth-child(3){
+        font-size: 28px;
+    }
+    /**Boton Compra Inicio-index-destinos sugeridos**/
+    .container-boton-destinos .botonCompra{
+        width: 150px;
+        height: 70px;
+    }
+    .container-boton-destinos .botonCompra p{
+        font-size: 28px;
+    }
+    .container-boton-destinos1 .botonCompra{
+        width: 130px;
+        height: 70px;
+    }
+    .container-boton-destinos1 .botonCompra p{
+        font-size: 22px;
+    }
+    .contenedorBoton .botonCompra{
+        width: 130px;
+        height: 70px;
+        padding: 1px;
+    }
+    .disclaimer-oferta{
+        padding: 10px;
+        text-align: center;
+    }
+    .contenedorBoton .precio-oferta{
+        font-size: 22px;
+    }
+    .text-oferta{
+        font-size: 18px;
+    }
+    .text-rebaja {
+        margin: 7px;
+        font-size: 18px;
+    }
+    .divInfo{
+        margin-top: 100px;
+    }
+    .paisDest{
+        margin: 0%;
+        font-size: 13px;
+    }
+    .ciudadDest{
+        font-size: 35px;
+    }
+    .contDestino p{
+        width: 150px;
+        height: auto;
+    }
+    .desCiudad{
+        font-size: 13px;
+    }
+    .dest-info .dest-pais{
+        font-size: 20px;
+    } 
+    .dest-info .dest-ciudad {
+        font-size: 30px;
+    }
 
     /**HOTEL**/
     .divHotel{

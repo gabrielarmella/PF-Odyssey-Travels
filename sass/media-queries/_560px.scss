@@ -27,9 +27,112 @@
         }
         
     }
+    /**Pagina Inicio/Destinos-chile-jujuy-peru-bariloche**/
     .contenedorDest{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
+        padding: 0%;
+    }  
+    .container-boton-destinos{
+        margin-top: 200px;
+        gap: 0%;
+    }
+    .container-boton-destinos1{
+        margin-top: 200px;
+        gap: 0%;
+    }
+    .compraDiv {
+        width: 60px;
+        height: auto;
+        margin-left: 30px;
+    }
+    .destino{
+        width: 270px;
+        height: 400px;
+    }
+    .destino .card-img {
+        width: 270px;
+        height: 350px;
+    }
+    .dest-info{
+        width: 270px;
+        height: 90px;
+    }
+    .compraDiv div{
+        width: 125px;
+        height: 125px;
+    }
+    .container-boton-destinos .compraDiv p:nth-child(2) {
+        font-size: 20px;
+
+    }
+    .container-boton-destinos .compraDiv p:nth-child(3){
+        font-size: 20px;
+
+    }
+    .container-boton-destinos1 .compraDiv p:nth-child(2) {
+        font-size: 20px;
+    }
+    .container-boton-destinos1 .compraDiv p:nth-child(3){
+        font-size: 20px;
+    }
+    /**Boton Compra Inicio-index-destinos sugeridos**/
+    .container-boton-destinos .botonCompra{
+        width: 100px;
+        height: 50px;
+    }
+    .container-boton-destinos .botonCompra p{
+        font-size: 20px;
+    }
+    .container-boton-destinos1 .botonCompra{
+        width: 100px;
+        height: 50px;
+    }
+    .container-boton-destinos1 .botonCompra p{
+        font-size: 15px;
+    }
+    .contenedorBoton .botonCompra{
+        width: 100px;
+        height: 50px;
+        padding: 1px;
+    }
+    .disclaimer-oferta{
+        padding: 10px;
+        text-align: center;
+    }
+    .contenedorBoton .precio-oferta{
+        font-size: 16px;
+    }
+    .text-oferta{
+        font-size: 11px;
+    }
+    .text-rebaja {
+        margin: 7px;
+        font-size: 10px;
+    }
+    .divInfo{
+        margin-top: 100px;
+    }
+    .paisDest{
+        margin: 0%;
+        font-size: 13px;
+    }
+    .ciudadDest{
+        font-size: 35px;
+    }
+    .contDestino p{
+        width: 150px;
+        height: auto;
+    }
+    .desCiudad{
+        font-size: 13px;
+    }
+    .dest-info .dest-pais{
+        font-size: 20px;
+    } 
+    .dest-info .dest-ciudad {
+        font-size: 30px;
     }
     /**HOTEL**/
     .divHotel{
@@ -99,5 +202,45 @@
         flex-wrap: wrap;
         gap: 30px;
     }
+ /**form checkin**/
+ #checkin {
+    width: 300px;
+    height: 480px; 
+    padding-top: 50px;
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.contenedorContacto1 #checkin{
+    width: 300px;
+}
+
+.contenedorContacto1 #checkin fieldset{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.contenedorContacto1 #checkin input[type="text"],
+#checkin input[type="email"],
+#checkin input[type="tel"],
+#checkin textarea {
+    width: 160px;
+    padding: 4px;
+    background-color: white;
+    margin: 10px;
+    align-items: center;
+}
+.texto-contacto{
+    flex-direction: column;
+}
+.texto-contacto h4 {
+    font-size: 20px;
+}
+.contenedorContacto1 h5{
+    left: 8%;
+}
 }
 

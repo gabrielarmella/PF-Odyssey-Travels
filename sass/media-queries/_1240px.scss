@@ -9,7 +9,9 @@
     .menu-izquierda:hover{
         transform: scale(0.96);
     }
-
+    .contenedorIconos{
+        flex-direction: column;
+    }
     /**HOTEL**/
     .divHotel{
         width: 100%;

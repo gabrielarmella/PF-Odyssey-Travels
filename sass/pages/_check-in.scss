@@ -1,0 +1,117 @@
+/**Pagina CHECK-IN**/
+
+.contenedorContacto1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 80px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.contenedorContacto1 h5{ 
+    color: rgba(0, 0, 0, 0.753);
+    position: absolute;
+    top: 3%;
+    left: 12%;
+}
+
+.contenedorContacto1 h5{ 
+    color: rgba(0, 0, 0, 0.753);
+    position: absolute;
+    top: 3%;
+    left: 12%;
+}
+.texto-contacto h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/**Form**/
+#checkin {
+    width: 550px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+}
+
+#checkin fieldset {
+    display: flex;
+    border: medium none !important;
+    width: 100%;
+}
+
+
+
+#checkin input[type="text"],
+#checkin input[type="email"],
+#checkin input[type="tel"],
+#checkin textarea{
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    border-radius: 10px;
+}
+
+.texto-contacto{
+    align-items: center;
+}
+
+
+
+#checkin input[type="text"],
+#checkin input[type="email"],
+#checkin input[type="tel"],
+#checkin textarea {
+    width: 450px;
+    padding: 20px;
+    background-color: white;
+    margin: 25px;
+}
+
+#checkin input[type="text"]:hover,
+#checkin input[type="email"]:hover,
+#checkin input[type="tel"]:hover,
+#checkin textarea:hover{
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #e00c0c;
+}
+
+#checkin textarea {
+    height: 180px;
+    width: 450px;
+    resize: none;
+}
+
+#checkin button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+
+#checkin button[type="submit"]:hover{
+    transform: scale(0.9);
+    transition-duration: 0.40s;
+
+}
+
+#checkin input:focus,
+#checkin textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+#checkin .copyright{
+    display: flex;
+    justify-content: center;
+}

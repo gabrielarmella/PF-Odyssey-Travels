@@ -1,4 +1,7 @@
 @media screen and (max-width:321px){
+    .bgCardVacaciones{
+        height: 55vh;
+    }
     .navBar {
         align-items: stretch;
         justify-content: space-evenly;
@@ -14,23 +17,28 @@
         padding: 0%;
     }  
     .container-boton-destinos{
+        margin-top: 200px;
+        gap: 0%;
+    }
+    .container-boton-destinos1{
         margin-top: 400px;
         gap: 0%;
     }
     .compraDiv {
         width: 60px;
         height: auto;
+        margin-left: 10px;
     }
     .destino{
-        width: 220px;
+        width: 200px;
         height: 400px;
     }
     .destino .card-img {
-        width: 220px;
+        width: 200px;
         height: 350px;
     }
     .dest-info{
-        width: 220px;
+        width: 200px;
         height: 90px;
     }
     .compraDiv div{
@@ -43,6 +51,16 @@
         letter-spacing: .1875rem;
     }
     .container-boton-destinos .compraDiv p:nth-child(3){
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: .1875rem;
+    }
+    .container-boton-destinos1 .compraDiv p:nth-child(2) {
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: .1875rem;
+    }
+    .container-boton-destinos1 .compraDiv p:nth-child(3){
         font-size: 16px;
         font-weight: 500;
         letter-spacing: .1875rem;
@@ -64,6 +82,12 @@
     .desCiudad{
         font-size: 13px;
     }
+    .dest-info .dest-pais{
+        font-size: 20px;
+    } 
+    .dest-info .dest-ciudad {
+        font-size: 30px;
+    }
     /**HOTEL**/
     .divHotel{
         width: 100%;
@@ -82,6 +106,27 @@
                     letter-spacing: 3px;
                     font-weight: 600;
                 }
+                .tituloHotel1{
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+                .parrafoHotel1{
+                    top:30px;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .divHotel1{
+        width: 100%;
+        height: 250px;
+        .card-hotel1{
+            .textoDiv1{ 
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
                 .tituloHotel1{
                     font-size: 40px;
                     font-weight: 700;
@@ -166,6 +211,13 @@
     .container-boton-destinos .botonCompra p{
         font-size: 11px;
     }
+    .container-boton-destinos1 .botonCompra{
+        width: 70px;
+        height: 40px;
+    }
+    .container-boton-destinos1 .botonCompra p{
+        font-size: 11px;
+    }
     .contenedorBoton .botonCompra{
         width: 73px;
         height: 35px;
@@ -186,15 +238,20 @@
         font-size: 10px;
     }
     /**Vuelos Nacionales**/
-    .titulo-vuelos-nacionales{
-        height: 300px;
-    }
     .titulo-vuelos-nacionales h2{
         font-size: 25px;
     }
+    .titulo-vuelos-nacionales {
+        height: 250px;
+    }
     .subtitulo-vuelos-nacionales h3{
-        padding-top: 50px;
-        font-size: 40px;
+        height: 100px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        padding-top: 0px;
     }
     .logo-foot{
         display: flex;
@@ -204,10 +261,10 @@
         padding: none;
     }
     .footer-arrepentimiento-info{
-        padding: none;
+        padding: 20px;
     }
     .footer-arrepentimiento-body{
-        font-size: 10px;
+        font-size: 13px;
     }
     .menu-footer{
         flex-direction: column;
@@ -226,8 +283,6 @@
         height: 60px;
     }
 }
-
-
 .icono-boleto img{
     width: 60px;
     height: 60px;
@@ -313,11 +368,13 @@
 .contenedorContacto #contacto{
     width: auto;
 }
+
 .contenedorContacto #contacto fieldset{
     width: auto;
     justify-content: center;
     align-items: center;
 }
+
 
 .contenedorContacto #contacto input[type="text"],
 #contacto input[type="email"],
@@ -329,6 +386,37 @@
     margin: 10px;
     align-items: center;
 }
+/**form checkin**/
+#checkin {
+    width: 200px;
+    height: 400px; 
+    padding-top: 50px;
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.contenedorContacto1 #checkin{
+    width: 200px;
+}
+
+.contenedorContacto1 #checkin fieldset{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedorContacto1 #checkin input[type="text"],
+#checkin input[type="email"],
+#checkin input[type="tel"],
+#checkin textarea {
+    width: 160px;
+    padding: 4px;
+    background-color: white;
+    margin: 10px;
+    align-items: center;
+}
+
 
 .texto-contacto{
     align-items: center;
@@ -351,16 +439,42 @@
     margin: 15px;
     margin-top: 100px;
 }
+
 .video-contacto{
-    width: auto;
+    width: 100px;
     height: auto;
 }
 #contacto button[type=submit]{
     margin: 20px;
 }
+#checkin button[type=submit]{
+    margin: 20px;
+}
 .copyright{
     font-size: 10px;
 }
+/**Pagina Vuelos**/
+.vuelo-titulo{
+    height: 250px;
+}
+.vuelo-titulo h2{
+    font-size: 40px;
+}
+/**Pagina Vuelos Internacionales**/
+.titulo-vuelos-internacionales{
+    height: 240px;
+}
+.titulo-vuelos-internacionales h2 {
+    font-size: 30px;
+}
+/**Pagina Vuelos Nacionales**/
+
+
+/**Pagina CHECK-IN**/
+.texto-contacto h4{
+    flex-direction: column;
+}
+
 }
 
 
